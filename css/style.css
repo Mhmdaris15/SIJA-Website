@@ -15,7 +15,7 @@ header {
     display: grid;
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    /* position: absolute; */
     background-color: aqua;
     grid-template-columns: repeat(2, 50%);
 }
@@ -24,18 +24,35 @@ header {
     background-color: #f0ffff ;
     position: relative;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 .circle {
     position: absolute;
     top: 0;
     right: 0;
-    height: 400px;
-    width: 400px;
+    height: 20em;
+    width: 20em;
     background-color: #FFDA54;
     clip-path: ellipse(50% 50% at 95% 10%);
 }
+.buttons {
+    margin: 0 15% 0 17%;
+    display: flex;
+    justify-content: space-between;
+}
+.buttons * {
+    background-color: #1E2432;
+    padding: 15px;
+    border-radius: 40px;
+    cursor: pointer;
+}
 
+.buttons a {
+    text-decoration: none;
+    color: #f0ffff;
+    font-weight: 900;
+}
 .text {
     margin: 0 24% 0 17%;
 }
@@ -62,6 +79,18 @@ header {
     grid-area: img-preview;
     background-color: #0198FF;
 }
+/* * ------------------------------------ SLICK FOR HEADER ------------------------------------ */
+.my-slick {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    column-gap: 15px;
+}
+.kotak {
+    width: 200px;
+    height: 100px;
+    background-color: #f0ffff;
+}
 .img-desc {
     grid-area: img-desc;
     background-color: #1A49BA;
@@ -76,6 +105,7 @@ header {
 nav {
     display: flex;
     position: absolute;
+    top: 0;
     align-items: center;
     margin: 1.5em 0 0 2em ;
 }
@@ -95,5 +125,59 @@ nav .nav-lists{
     text-decoration: none;
 }
 
+/* * ------------------------------------ SECTIONS ------------------------------------ */
 
-/* VIDEO SECTION  */
+
+/* * ------------------------------------ VIDEO SECTION ------------------------------------ */
+.video-sija {
+    position: relative;
+    width: 70%;
+    margin: 5em auto;
+}
+.video-id {
+    border-radius: 30px;
+}
+#fluid_video_wrapper_video-id {
+    width: 100% !important;
+}
+
+/* ! ------------------------------------ RESPONSIVE PAGE ------------------------------------ */
+@media screen and (max-width: 600px) {
+    .grid-header {
+        height: 200vh;
+        /* display: flex; */
+        /* flex-direction: column; */
+        grid-template-columns: 100%;
+        
+    }
+    .left-side {
+        width: 100%;
+    }
+    .right-side {
+        /* display: grid;
+        width: 100vw;
+        grid-template-areas:
+        "img-preview"
+        "img-desc";
+        grid-template-columns: 75% 25%;
+        grid-template-rows: 75% 25%; */
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
+    .img-preview {
+        width: 100vw;
+        height: 75%;
+    }
+    .img-desc {
+        width: 100vw;
+        height: 25%;
+    }
+    .kotak {
+        display: none;
+    }
+
+    .video-sija {
+        width: 92%;
+    }
+}
