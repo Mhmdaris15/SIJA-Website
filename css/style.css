@@ -12,13 +12,72 @@ html, body, div {
 
 /* * ------------------------------------ HEADER ------------------------------------ */
 header {
-
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: aqua;
+    grid-template-columns: repeat(2, 50%);
 }
+
+.left-side {
+    background-color: #f0ffff ;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.circle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 400px;
+    width: 400px;
+    background-color: #FFDA54;
+    clip-path: ellipse(50% 50% at 95% 10%);
+}
+
+.text {
+    margin: 0 24% 0 17%;
+}
+
+.text h1 {
+    font-size: 70px;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 15px;
+}
+.text p {
+    line-height: 1.5;
+}
+
+.right-side {
+    display: grid;
+    grid-template-areas:
+    "img-preview img-preview"
+    "img-desc empty-space";
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 75% 25%;
+}
+.img-preview {
+    grid-area: img-preview;
+    background-color: #0198FF;
+}
+.img-desc {
+    grid-area: img-desc;
+    background-color: #1A49BA;
+}
+.empty-space {
+    grid-area: empty-space;
+    background-color: #F9B8C4;
+}
+
 
 /* * ------------------------------------ NAVIGATION BAR ------------------------------------*/
 nav {
     display: flex;
     position: absolute;
+    align-items: center;
+    margin: 1.5em 0 0 2em ;
 }
 
 nav .nav-lists{
