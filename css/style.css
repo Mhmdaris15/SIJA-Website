@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&family=Quicksand:wght@300;400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Quicksand', 'PT Sans', 'Plus Jakarta Sans', sans-serif;
+}
+
+/* * ------------------------------------ Starting Setup ------------------------------------ */
+html, body, div {
+    margin: 0;
+}
+
+/* * ------------------------------------ HEADER ------------------------------------ */
+header {
+
+}
+
+/* * ------------------------------------ NAVIGATION BAR ------------------------------------*/
+nav {
+    display: flex;
+    position: absolute;
+}
+
+nav .nav-lists{
+    display: flex;
+    column-gap: 20px;
+}
+
+.nav-list {
+    list-style: none;
+    font-weight: bolder;
+}
+
+.nav-list a {
+    color: #000000;
+    text-decoration: none;
+}
+
+
+/* VIDEO SECTION  */
