@@ -10,10 +10,15 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.2/swiper-bundle.min.css" integrity="sha512-hhiS6muPW6W6KvaFQmuEL0KWnLpq01sQR/qns+GqBPVu9wBg7JG/touq/t0qhmzFTCbLAyFKtHyFnyentlqOOw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
+
 <body>
-    <!-- HEADER -->
+    <!-- * HEADER -->
+    <div class="bar-progress"></div>
     <header class="grid-header">
         <div class="left-side">
             <div class="circle"></div>
@@ -29,17 +34,37 @@
         </div>
         <div class="right-side">
             <div class="img-preview my-slick">
-                    <div class="kotak"></div>
-                    <div class="kotak"></div>
-                    <div class="kotak"></div>
-                    <div class="kotak"></div>
+                    <div class="box"><img src="img/3d-flame-woman-in-suit-standing-in-front-of-photo-store.png" alt="Vector"><p>Camera House</p></div>
+                    <div class="box"><img src="img/arabica-890.png" alt="Vector"><p>Mouse with Rocket</p></div>
+                    <div class="box"><img src="img/business-3d-young-man-sitting-on-the-floor-with-dog-in-sweater-and-taking-photo.png" alt="Vector"><p>Man with The Dog</p></div>
+                    <div class="box"><img src="img/inky-medical-check-1.png" alt="Vector"><p>Medical Checkup</p></div>
             </div>
             <div class="img-desc"></div>
             <div class="empty-space"></div>
         </div>
+        <div class="menu" id="menu">
+           <div class="menu-header">
+            <a href=""><img src="img/sija-logo.png" alt="Logo"></a>
+            <i class="fa-solid fa-xmark menuLogo1" id="menuLogo1"></i>
+           </div>
+            <ul class="nav-lists-menu">
+                <li class="nav-list-menu"><a href="">Explore</a></li>
+                <li class="nav-list-menu"><a href="">Company</a></li>
+                <li class="nav-list-menu"><a href="">Pricing</a></li>
+                <li class="nav-list-menu"><a href="">Marketplace</a></li>
+            </ul>
+        </div>
+        <h1 class="title-photos">Cuplikan Gedung SIJA</h1>
+        <div class="down-side">
+            <div class="box"><img src="img/3d-flame-woman-in-suit-standing-in-front-of-photo-store.png" alt="Image"></div>
+            <div class="box"><img src="img/arabica-890.png" alt="Image"></div>
+            <div class="box"><img src="img/business-3d-young-man-sitting-on-the-floor-with-dog-in-sweater-and-taking-photo.png" alt="Image"></div>
+            <div class="box"><img src="img/inky-medical-check-1.png" alt="Image"></div>
+        </div>
+        </div>
     </header>
 
-    <!-- NAVIGATION BAR -->
+    <!-- * NAVIGATION BAR -->
     <nav>
         <a href=""><img src="img/sija-logo.png" alt="Logo"></a>
         <ul class="nav-lists">
@@ -48,14 +73,16 @@
             <li class="nav-list"><a href="#">Pricing</a></li>
             <li class="nav-list"><a href="#">Marketplace</a></li>
         </ul>
+        <i class="fa-solid fa-bars menuLogo2" id="menuLogo2"></i>
     </nav>
 
-    <!-- SECTIONS -->
+    <!-- * SECTIONS -->
     <section class="video-sija" id="video-sija">
-        <video id="video-id"><source src="videos/Гимн СССР(National Anthem of the Soviet Union).mp4" type="video/mp4" />
+        <!-- <video id="video-id"><source src="videos/Гимн СССР(National Anthem of the Soviet Union).mp4" type="video/mp4" /> -->
     </section>
     <section></section>
     <section></section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.2/swiper-bundle.min.js" integrity="sha512-EWat0/wkEZtE7OENhG700T+jmrpHStGS7CqHUAzKW5MzNnVEa9Wfb+zJjF4hoXSgMTWlixL5Fgqhjx5PAliaXw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>

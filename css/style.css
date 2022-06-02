@@ -11,6 +11,9 @@ html, body, div {
 }
 
 /* * ------------------------------------ HEADER ------------------------------------ */
+.bar-progress {
+    
+}
 header {
     display: grid;
     width: 100vw;
@@ -36,6 +39,19 @@ header {
     background-color: #FFDA54;
     clip-path: ellipse(50% 50% at 95% 10%);
 }
+.text {
+    margin: 0 24% 0 17%;
+}
+
+.text h1 {
+    font-size: 70px;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 15px;
+}
+.text p {
+    line-height: 1.5;
+}
 .buttons {
     margin: 0 15% 0 17%;
     display: flex;
@@ -53,19 +69,6 @@ header {
     color: #f0ffff;
     font-weight: 900;
 }
-.text {
-    margin: 0 24% 0 17%;
-}
-
-.text h1 {
-    font-size: 70px;
-    font-weight: 600;
-    text-decoration: underline;
-    text-underline-offset: 15px;
-}
-.text p {
-    line-height: 1.5;
-}
 
 .right-side {
     display: grid;
@@ -79,18 +82,63 @@ header {
     grid-area: img-preview;
     background-color: #0198FF;
 }
+/* * ------------------------------------ MENU ------------------------------------ */
+.menu {
+    position: fixed;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color:#FFDA54;
+}
+#menuLogo2 {
+    display: none;
+}
+
+/* * ------------------------------------ DOWNSIDE ------------------------------------ */
+h1.title-photos {
+    display: none;
+    text-align: center;
+    font-size: 27px;
+}
+.down-side {
+    display: none !important;
+    margin: auto;
+    height: 50%;
+    width: 80%;
+    transform: translateY(-120%);
+}
+.down-side .box {
+    margin: auto;
+    width: 50%;
+    height: 50%;
+}
+.down-side .box img {
+    width: 100%;
+    object-fit: contain;
+}
+
+ul.slick-dots {
+    /* display: flex;
+    flex-direction: column;
+    transform: translate(100px, 100px); */
+}
+
+ul.slick-dots button {
+    background-color: #f0ffff;
+    color: azure;
+}
+
+
+
 /* * ------------------------------------ SLICK FOR HEADER ------------------------------------ */
 .my-slick {
     display: flex;
     width: 100%;
     height: 100%;
-    column-gap: 15px;
+    margin: auto;
+    justify-content: center;
 }
-.kotak {
-    width: 200px;
-    height: 100px;
-    background-color: #f0ffff;
-}
+
 .img-desc {
     grid-area: img-desc;
     background-color: #1A49BA;
@@ -99,17 +147,30 @@ header {
     grid-area: empty-space;
     background-color: #F9B8C4;
 }
-
+.right-side .slick-dots {
+    display: flex;
+    flex-direction: column;
+    transform: translate(2em, 6em);
+    z-index: 100;
+}
+.slick-slide p {
+    transform: translate(4em, 6em);
+    z-index: 100;
+}
 
 /* * ------------------------------------ NAVIGATION BAR ------------------------------------*/
 nav {
     display: flex;
+    width: 500px;
     position: absolute;
     top: 0;
     align-items: center;
     margin: 1.5em 0 0 2em ;
+    /* border: 1px solid #000000; */
 }
-
+nav img {
+    max-width: 80%;
+}
 nav .nav-lists{
     display: flex;
     column-gap: 20px;
@@ -118,6 +179,14 @@ nav .nav-lists{
 .nav-list {
     list-style: none;
     font-weight: bolder;
+}
+
+.nav-list:hover {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
 }
 
 .nav-list a {
@@ -142,26 +211,31 @@ nav .nav-lists{
 }
 
 /* ! ------------------------------------ RESPONSIVE PAGE ------------------------------------ */
-@media screen and (max-width: 600px) {
+
+
+@media screen and (max-width: 743px) {
     .grid-header {
         height: 200vh;
         /* display: flex; */
         /* flex-direction: column; */
         grid-template-columns: 100%;
-        
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 10% 0 0;
+    }
+    nav .nav-lists{
+        display: none;
     }
     .left-side {
-        width: 100%;
+        display: flex;
+        width: 100vw;
+        height: 100vh;
     }
     .right-side {
-        /* display: grid;
-        width: 100vw;
-        grid-template-areas:
-        "img-preview"
-        "img-desc";
-        grid-template-columns: 75% 25%;
-        grid-template-rows: 75% 25%; */
-        display: flex;
+        display: none;
         flex-direction: column;
         width: 100vw;
     }
@@ -179,5 +253,65 @@ nav .nav-lists{
 
     .video-sija {
         width: 92%;
+    }
+
+    .text {
+        margin: 200px auto 0;
+        text-align: center;
+        padding: 0 2%;
+    }
+
+    .text h1 {
+        font-size: 40px;
+        text-underline-offset: 10px;
+    }
+
+    .buttons {
+        margin: auto;
+        flex-direction: column;
+        row-gap: 1em;
+    }
+
+    .menu {
+        /* display: flex; */
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        /* opacity: 0; */
+        /* transition: 1s    ease-in; */
+    }
+    .menu-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5%;
+    }
+    .menuLogo1#menuLogo1 {
+        display: block;
+        width: auto;
+        font-size: 50px;
+        width: 70px;
+        height: 70px;
+    }
+    .menuLogo2#menuLogo2 {
+        display: block;
+        width: 70px;
+        height: 70px;
+        font-size: 40px;
+    }
+    .nav-lists-menu {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+    }
+    .nav-lists-menu a {
+        text-decoration: none;
+        color: #000000;
+        font-weight: 900;
+        font-size: 27px;
+    }
+    h1.title-photos, .down-side {
+        display: block !important;
     }
 }
