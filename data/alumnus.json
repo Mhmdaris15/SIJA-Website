@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Muhammad Aris",
+        "job" : "Software Engineer",
+        "salary": "$2500 - $3000 / month",
+        "company": "Google Inc",
+        "photo": "img/louis-hansel-shotsoflouis-8N5YoFTDak0-unsplash.jpg"
+    },
+    {
+        "name": "Mila Nabila",
+        "job" : "Network Engineer",
+        "salary": "$2500 - $3000 / month",
+        "company": "Google Inc",
+        "photo": "img/business-3d-young-man-sitting-on-the-floor-with-dog-in-sweater-and-taking-photo.png"
+    },
+    {
+        "name": "Adam Darusman",
+        "job" : "Graphic Designer",
+        "salary": "$2500 - $3000 / month",
+        "company": "Adobe Inc",
+        "photo": "img/inky-medical-check-1.png"
+    },
+    {
+        "name": "Marvin Saputra",
+        "job" : "DevOps Engineer",
+        "salary": "$2500 - $3100 / month",
+        "company": "Alibaba Cloud",
+        "photo": "img/davide-cantelli-jpkfc5_d-DI-unsplash.jpg"
+    },
+    {
+        "name": "Fauzan Aziz",
+        "job" : "Front-end Developer",
+        "salary": "$2500 - $3000 / month",
+        "company": "MNC Corp.",
+        "photo": "img/a-hot-bowl-of-soup-on-a-table-top.jpg"
+    }
+]

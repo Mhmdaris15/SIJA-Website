@@ -5,6 +5,11 @@
   font-family: "Quicksand", "PT Sans", "Plus Jakarta Sans", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+  /* scroll-padding-top: 5%; */
+}
+
 /* * ------------------------------------ Starting Setup ------------------------------------ */
 html,
 body,
@@ -17,8 +22,10 @@ body {
   min-height: 100vh;
 }
 
+/* * ------------------------------------ SCROLL WRAPPERS ------------------------------------ */
+
+
 /* * ------------------------------------ HEADER ------------------------------------ */
-/* .bar-progress {} */
 
 header {
   display: grid;
@@ -75,6 +82,7 @@ header {
   margin: 0 15% 0 17%;
   display: flex;
   justify-content: space-between;
+  z-index: 2;
 }
 
 .buttons>* {
@@ -271,14 +279,127 @@ nav .nav-lists {
   width: 100% !important;
 }
 
+
+.container-video {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: url(../img/davide-cantelli-jpkfc5_d-DI-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.container-video h1{
+  color:#fff;
+}
+
+.container-video .btn {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.container-video .btn .play {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background-color: #f42e79;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 15px 25px #f42e7966;
+  transition: 0.5s;
+}
+
+.container-video .btn.active .play {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 0 1500vh#f42e79;
+  z-index: 15 !important;
+
+}
+
+.container-video .btn .play::before {
+  content: "";
+  position: absolute;
+  border: 25px solid #fff;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 0px solid transparent;
+  transform: translateX(5px);
+  z-index: 10;
+}
+
+.container-video .btn p {
+  font-weight: 500;
+  font-size: 1em;
+  color: #888;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.container-video .clip {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 16 !important;
+  transition: 0.5s;
+}
+
+.container-video .clip.active {
+  transition-delay: 0.4s;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.container-video .clip video, .clip iframe {
+  width: 80%;
+  height: 80%;
+  outline: none;
+  border: 10px solid #fff;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.243);
+}
+
+.container-video .clip .close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .container-video .clip video {
+    width: 90%;
+  }
+}
+
+
 /* * TABLE ALUMNUS */
 
 .table-alumnus {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  position: block;
+  /* top: 50%;
+  left: 50%; */
+  width: 100% !important;
+  /* -webkit-transform: translate(-50%, -50%); */
+  /* transform: translate(-50%, -50%); */
   padding: 5% 0;
   background-color: #beff99;
   background-image:
@@ -289,12 +410,13 @@ nav .nav-lists {
     radial-gradient(at 11% 4%, hsla(108, 74%, 79%, 1) 0px, transparent 50%),
     radial-gradient(at 68% 83%, hsla(27, 97%, 60%, 1) 0px, transparent 50%),
     radial-gradient(at 85% 51%, hsla(56, 76%, 60%, 1) 0px, transparent 50%);
+    z-index: 4;
 
 }
 
 .table-alumnus table {
   margin: auto;
-  width: 800px;
+  width: 50%;
   border-collapse: collapse;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -334,13 +456,17 @@ nav .nav-lists {
   top: -9999px;
   bottom: -9999px;
   background-color: rgba(255, 255, 255, 0.2);
-  z-index: -1;
+  z-index: 0;
 }
 
 
 /* ! ------------------------------------ RESPONSIVE PAGE ------------------------------------ */
 
-@media screen and (max-width: 450px) {}
+@media screen and (max-width: 450px) {
+  .table-alumnus table {
+    width: 90%;
+  }
+}
 
 @media screen and (max-width: 743px) {
   .grid-header {
@@ -412,7 +538,7 @@ nav .nav-lists {
     /* display: flex; */
     width: 100%;
     height: 100%;
-    z-index: 2;
+    z-index: 50;
     /* opacity: 0; */
     /* transition: 1s    ease-in; */
   }
@@ -557,7 +683,7 @@ nav .nav-lists {
 .slider-container .left-slide section {
   margin-bottom: 30px;
   text-align: center;
-  z-index: 100;
+  z-index: 12;
 }
 
 .slider-container .left-slide h1 {
@@ -601,7 +727,7 @@ nav .nav-lists {
 }
 
 .slider-container .right-slide .quotes {
-  z-index: 100;
+  z-index: 12;
 }
 
 .slider-container .right-slide > div::after {
@@ -617,7 +743,7 @@ nav .nav-lists {
   position: absolute;
   left: 35%;
   top: 50%;
-  z-index: 100;
+  z-index: 12;
 }
 
 .slider-container .action-buttons .down-button {

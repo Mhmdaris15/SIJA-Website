@@ -14,9 +14,81 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.2/swiper-bundle.min.css" integrity="sha512-hhiS6muPW6W6KvaFQmuEL0KWnLpq01sQR/qns+GqBPVu9wBg7JG/touq/t0qhmzFTCbLAyFKtHyFnyentlqOOw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .alumnus-cards {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: space-around;
+        }
+        .alumnus-card-parent {
+            width: 40%;
+        }
+
+    </style>
 </head>
 <body>
+ <!-- * HEADER -->
+ <div class="bar-progress"></div>
+ <header class="grid-header">
+     <div class="left-side">
+         <div class="circle"></div>
+         <img src="img/3d-object-hd.png" alt="3D Object">
+         <div class="text">
+             <h1>You Sales Team Reimagined</h1>
+             <p>Free up your closers by tapping into a pool of qualified appointment setters ready to take over the
+                 tedious tasks of qualifying, warming, and appointment setting.</p>
+         </div>
+         <div class="buttons">
+             <div class="button-1"><a href="">Contact Us</a></div>
+             <div class="button-2"><a href="#video-sija">Play Video</a></div>
+         </div>
+     </div>
+     <div class="right-side">
+         <div class="img-preview my-slick">
+                 <div class="box"><img src="img/3d-flame-woman-in-suit-standing-in-front-of-photo-store.png" alt="Vector"><p>Camera House</p></div>
+                 <div class="box"><img src="img/arabica-890.png" alt="Vector"><p>Mouse with Rocket</p></div>
+                 <div class="box"><img src="img/business-3d-young-man-sitting-on-the-floor-with-dog-in-sweater-and-taking-photo.png" alt="Vector"><p>Man with The Dog</p></div>
+                 <div class="box"><img src="img/inky-medical-check-1.png" alt="Vector"><p>Medical Checkup</p></div>
+         </div>
+         <div class="img-desc"></div>
+         <div class="empty-space"></div>
+     </div>
+     <div class="menu" id="menu">
+        <div class="menu-header">
+         <a href=""><img src="img/sija-logo.png" alt="Logo"></a>
+         <i class="fa-solid fa-xmark menuLogo1" id="menuLogo1"></i>
+        </div>
+         <ul class="nav-lists-menu">
+            <li class="nav-list-menu"><a href="/">Home</a>/li>
+            <li class="nav-list-menu"><a href="/#lulusan">Lulusan</a></li>
+            <li class="nav-list-menu"><a href="/#kepala-program">Kepala Program</a></li>
+            <li class="nav-list-menu"><a href="/#contact-us">Contact Us</a></li>
+         </ul>
+     </div>
+     <h1 class="title-photos">Cuplikan Gedung SIJA</h1>
+     <div class="down-side">
+         <div class="box"><img src="img/3d-flame-woman-in-suit-standing-in-front-of-photo-store.png" alt="Image"></div>
+         <div class="box"><img src="img/arabica-890.png" alt="Image"></div>
+         <div class="box"><img src="img/business-3d-young-man-sitting-on-the-floor-with-dog-in-sweater-and-taking-photo.png" alt="Image"></div>
+         <div class="box"><img src="img/inky-medical-check-1.png" alt="Image"></div>
+     </div>
+     </div>
+ </header>
 
+ <!-- * NAVIGATION BAR -->
+ <nav>
+     <a href=""><img src="img/sija-logo.png" alt="Logo"></a>
+     <ul class="nav-lists">
+         <li class="nav-list"><a href="/">Home</a></li>
+         <li class="nav-list"><a href="/#lulusan">Lulusan</a></li>
+            <li class="nav-list"><a href="/#kepala-program">Kepala Program</a></li>
+            <li class="nav-list"><a href="/#contact-us">Contact Us</a></li>
+     </ul>
+     <i class="fa-solid fa-bars menuLogo2" id="menuLogo2"></i>
+ </nav>
+
+<!-- * ALUMNUS SECTION -->
     <div class="alumnus-cards">
         <div class="alumnus-card-parent">
             <div class="top-card"><ul class="dots">
@@ -44,7 +116,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/video.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+    <script src="js/alumnus.js"></script>
+    <!-- <script src="js/video.js"></script> -->
 </body>
 </html>
