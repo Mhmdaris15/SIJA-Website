@@ -121,3 +121,16 @@ const changeSlide = (direction) => {
   }px)`;
 };
 
+$(document).ready(function () {
+  $(".mobile-slider").slick({
+    arrows: false,
+    dots: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 1000,
+  });
+});
+
+setInterval(() => {
+  document.querySelector(".up-button").click();
+}, 7000);
