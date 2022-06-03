@@ -42,7 +42,7 @@ $(document).ready(function () {
   // imgButtons.forEach(imgbutton => {
   //     imgbutton.addEventListener('')
   // })
-  $('.alumnus-cards').slick({
+  $(".alumnus-cards").slick({
     dots: true,
     infinite: true,
     speed: 300,
@@ -55,27 +55,27 @@ $(document).ready(function () {
           slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
-          dots: true
-        }
+          dots: true,
+        },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
+          slidesToScroll: 1,
+        },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
+          slidesToScroll: 1,
+        },
+      },
       // You can unslick at a given breakpoint now by adding:
       // settings: "unslick"
       // instead of a settings object
-    ]
+    ],
   });
 });
 
@@ -96,8 +96,7 @@ close.onclick = function () {
   video.pause();
 };
 
-
-// * FAUZAN SECTION
+// * FAUZAN SECTION --------------------------------------------------------------------------------------------
 
 // --------------------------------------------head of departement-------------------------------------------
 const sliderContainer = document.querySelector(".slider-container");
@@ -153,6 +152,6 @@ $(document).ready(function () {
 
 setInterval(() => {
   document.querySelector(".up-button").click();
-}, 7000);
+}, 4000);
 
 // * ADAM SECTION
