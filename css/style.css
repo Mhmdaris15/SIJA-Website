@@ -18,8 +18,8 @@ body {
 }
 
 /* * ------------------------------------ HEADER ------------------------------------ */
-.bar-progress {
-}
+.bar-progress {}
+
 header {
   display: grid;
   width: 100vw;
@@ -36,6 +36,7 @@ header {
   justify-content: center;
   flex-direction: column;
 }
+
 .circle {
   position: absolute;
   top: 0;
@@ -45,8 +46,18 @@ header {
   background-color: #ffda54;
   clip-path: ellipse(50% 50% at 95% 10%);
 }
+
+.left-side>img {
+  width: 69%;
+  margin: auto;
+  position: absolute;
+  margin-left: 10%;
+  opacity: 50%;
+}
+
 .text {
   margin: 0 24% 0 17%;
+  z-index: 2;
 }
 
 .text h1 {
@@ -55,17 +66,20 @@ header {
   text-decoration: underline;
   text-underline-offset: 15px;
 }
+
 .text p {
   line-height: 1.5;
 }
+
 .buttons {
   margin: 0 15% 0 17%;
   display: flex;
   justify-content: space-between;
 }
-.buttons * {
+
+.buttons>* {
   background-color: #1e2432;
-  padding: 15px;
+  padding: 20px;
   border-radius: 40px;
   cursor: pointer;
 }
@@ -76,6 +90,29 @@ header {
   font-weight: 900;
 }
 
+.buttons .button-1:hover {
+  background-color: #F9B8C4;
+  color: #1E2432;
+  transition: 0.2s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+.buttons .button-1:hover a {
+  color: black;
+  font-weight: 900;
+}
+
+.buttons .button-2:hover {
+  background-color: #F9B8C4;
+  color: #1E2432;
+  transition: 0.2s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+.buttons .button-2:hover a {
+  color: black;
+  font-weight: 900;
+}
+
+
 .right-side {
   display: grid;
   grid-template-areas:
@@ -84,10 +121,12 @@ header {
   grid-template-columns: 75% 25%;
   grid-template-rows: 75% 25%;
 }
+
 .img-preview {
   grid-area: img-preview;
   background-color: #0198ff;
 }
+
 /* * ------------------------------------ MENU ------------------------------------ */
 .menu {
   position: fixed;
@@ -96,6 +135,7 @@ header {
   height: 100vh;
   background-color: #ffda54;
 }
+
 #menuLogo2 {
   display: none;
 }
@@ -106,6 +146,7 @@ h1.title-photos {
   text-align: center;
   font-size: 27px;
 }
+
 .down-side {
   display: none !important;
   margin: auto;
@@ -113,11 +154,13 @@ h1.title-photos {
   width: 80%;
   transform: translateY(-120%);
 }
+
 .down-side .box {
   margin: auto;
   width: 50%;
   height: 50%;
 }
+
 .down-side .box img {
   width: 100%;
   object-fit: contain;
@@ -147,23 +190,30 @@ ul.slick-dots button {
   grid-area: img-desc;
   background-color: #1a49ba;
 }
+
 .empty-space {
   grid-area: empty-space;
   background-color: #f9b8c4;
 }
+
 .right-side .slick-dots {
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* transform: translate(2em, 6em); */
-  /* z-index: 100; */
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  transform: translate(2em, 6em);
+  z-index: 10;
+  overflow: hidden !important;
 }
+
 .slick-slide p {
-  transform: translate(4em, 6em);
-  z-index: 100;
+  /* transform: translate(4em, 6em);
+  z-index: 100; */
 }
-.slick-list {
-  padding-top: 20% !important;
-  padding-left: 20% !important;
+
+.right-side .slick-list {
+  transform: trn;
+  margin-top: 20% !important;
+  margin-left: 10% !important;
 }
 
 /* * ------------------------------------ NAVIGATION BAR ------------------------------------*/
@@ -177,9 +227,11 @@ nav {
   /* border: 1px solid #000000; */
   transform: translateX(1.5em);
 }
+
 nav img {
   max-width: 80%;
 }
+
 nav .nav-lists {
   display: flex;
   column-gap: 20px;
@@ -190,17 +242,16 @@ nav .nav-lists {
   font-weight: bolder;
 }
 
-.nav-list:hover {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: #000000;
-}
-
 .nav-list a {
   color: #000000;
   text-decoration: none;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.nav-list a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  transform: translateY(2em);
 }
 
 /* * ------------------------------------ SECTIONS ------------------------------------ */
@@ -211,14 +262,85 @@ nav .nav-lists {
   width: 70%;
   margin: 5em auto;
 }
+
 .video-id {
   border-radius: 30px;
 }
+
 #fluid_video_wrapper_video-id {
   width: 100% !important;
 }
 
+/* * TABLE ALUMNUS */
+
+.table-alumnus {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 5% 0;
+  background-color: #beff99;
+  background-image:
+    radial-gradient(at 80% 17%, hsla(317, 99%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 10% 21%, hsla(17, 85%, 79%, 1) 0px, transparent 50%),
+    radial-gradient(at 63% 84%, hsla(252, 73%, 71%, 1) 0px, transparent 50%),
+    radial-gradient(at 83% 4%, hsla(215, 76%, 62%, 1) 0px, transparent 50%),
+    radial-gradient(at 11% 4%, hsla(108, 74%, 79%, 1) 0px, transparent 50%),
+    radial-gradient(at 68% 83%, hsla(27, 97%, 60%, 1) 0px, transparent 50%),
+    radial-gradient(at 85% 51%, hsla(56, 76%, 60%, 1) 0px, transparent 50%);
+
+}
+
+.table-alumnus table {
+  margin: auto;
+  width: 800px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+}
+
+.table-alumnus th,
+.table-alumnus td {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.table-alumnus th {
+  text-align: left;
+}
+
+.table-alumnus thead th {
+  background-color: #55608f;
+}
+
+.table-alumnus tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.table-alumnus tbody td {
+  position: relative;
+  color: #000000;
+  font-weight: 700;
+}
+
+.table-alumnus tbody td:hover:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9999px;
+  bottom: -9999px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+
+
 /* ! ------------------------------------ RESPONSIVE PAGE ------------------------------------ */
+
+@media screen and (max-width: 450px) {}
 
 @media screen and (max-width: 743px) {
   .grid-header {
@@ -227,33 +349,40 @@ nav .nav-lists {
     /* flex-direction: column; */
     grid-template-columns: 100%;
   }
+
   nav {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    padding: 0 10% 0 0;
+    width: 90%;
+    padding: 0;
   }
+
   nav .nav-lists {
     display: none;
   }
+
   .left-side {
     display: flex;
     width: 100vw;
     height: 100vh;
   }
+
   .right-side {
     display: none;
     flex-direction: column;
     width: 100vw;
   }
+
   .img-preview {
     width: 100vw;
     height: 75%;
   }
+
   .img-desc {
     width: 100vw;
     height: 25%;
   }
+
   .kotak {
     display: none;
   }
@@ -287,12 +416,14 @@ nav .nav-lists {
     /* opacity: 0; */
     /* transition: 1s    ease-in; */
   }
+
   .menu-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5%;
   }
+
   .menuLogo1#menuLogo1 {
     display: block;
     width: auto;
@@ -300,31 +431,39 @@ nav .nav-lists {
     width: 70px;
     height: 70px;
   }
+
   .menuLogo2#menuLogo2 {
     display: block;
     width: 70px;
     height: 70px;
     font-size: 40px;
   }
+
   .nav-lists-menu {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 1.2em;
   }
+
   .nav-lists-menu a {
     text-decoration: none;
     color: #000000;
     font-weight: 900;
     font-size: 27px;
   }
+
   h1.title-photos,
   .down-side {
     display: block !important;
   }
+
+  h1.title-photos {
+    margin-bottom: 15%;
+  }
 }
 
-/* FAUZAN SECTION */
+/* TODO FAUZAN SECTION */
 
 /* ---------------------------------------------------------------------!Head of departement ---------------------------------------------------*/
 .slider-container {
@@ -349,7 +488,7 @@ nav .nav-lists {
   transition: transform 0.5s ease-in-out;
 }
 
-.slider-container .left-slide > div {
+.slider-container .left-slide>div {
   height: 100%;
   width: 100%;
   display: flex;
@@ -395,7 +534,7 @@ nav .nav-lists {
   background-color: red;
 }
 
-.slider-container .right-slide > div {
+.slider-container .right-slide>div {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -479,6 +618,7 @@ nav .nav-lists {
     height: 150vh;
     width: 100%;
   }
+
   .capt {
     width: 100%;
   }
@@ -653,6 +793,7 @@ footer .logo2,
 footer .logo3 {
   border: 2px solid white;
 }
+
 footer .logo1 {
   position: absolute;
   bottom: 80px;
@@ -686,17 +827,21 @@ footer .logo3 {
 }
 
 @media (max-width: 390px) {
+
   footer .logo1,
   footer .logo2,
   footer .logo3 {
     width: 6em;
   }
+
   footer .logo1 {
     bottom: 60px;
   }
+
   footer .logo2 {
     right: 110px;
   }
+
   footer .logo3 {
     right: 30px;
   }

@@ -1,0 +1,145 @@
+.alumnus-cards {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 20px;
+    /* margin-bottom: 10%; */
+}
+.alumnus-card-parent {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    margin: auto 2em !important;
+}  
+
+.alumnus-card-parent .top-card {
+    width: 100%;
+    height: 10%;
+    background-color: #000;
+    margin: auto;
+    border-radius: 20px 20px 0 0 ;
+}
+.alumnus-card-parent .top-card ul.dots{
+    height: 2em !important;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.alumnus-card {
+    display: flex;
+    position: relative;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    padding: 2em;
+    border-radius: 0 0 20px 20px;
+    /* transform: translateY(30px); */
+}
+
+.alumnus-card-parent:nth-child(3n-1) .alumnus-card {
+    background-color: #FFE53B;
+    background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+}
+
+.alumnus-card-parent:nth-child(3n) .alumnus-card{
+    background-color: #FA8BFF;
+    background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+
+}
+
+/* .alumnus-card::before {
+    content: "";
+    position: absolute;
+    height: 15%;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    background-color: black;
+    transform: translate(-50px, -70px);
+    z-index: -1;
+} */
+
+.alumnus-card .photo {
+    width: 9em;
+    height: 9em;
+    background-color: #FFCC70;
+    border-radius: 50%;
+}
+
+.alumnus-card img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.alumnus-card .biodata {
+    margin-left: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+    width: 40%;
+}
+
+.biodata .name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffe4c4;
+}
+
+.biodata .job {
+    color: #faebd7;
+    font-weight: 700;
+}
+
+.biodata .salary {
+    color: #005a96;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.biodata .company {}
+
+.dots {
+    display: flex;
+    gap: 10px;
+}
+
+.dots .dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    list-style: none;
+    /* transform: translate(-5em, -26em); */
+}
+
+.dot:nth-child(1) {
+    background-color: red;
+}
+
+.dot:nth-child(2) {
+    background-color: yellow;
+}
+
+.dot:nth-child(3) {
+    background-color: lightgreen;
+}
+
+section.alumnus-carousel {
+    background-image: url(../img/hand-drawn-abstract-doodle.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 5em 0;
+}
+
+@media screen and (max-width: 743px){
+    .alumnus-card-parent {
+        width: 100%;
+    }
+    .alumnus-card-parent {
+        flex-direction: column;
+    }
+}
