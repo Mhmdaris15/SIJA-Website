@@ -264,6 +264,92 @@ nav .nav-lists {
 
 /* * ------------------------------------ SECTIONS ------------------------------------ */
 
+/* * ------------------------------------ SIJA PHOTOS ------------------------------------ */
+
+.sija-photo-section {
+  width: 100%;
+  height: 80vh;
+  margin: auto;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* justify-items: center; */
+  background-image: url(../img/bg1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.container-sija-photos {
+  position: block;
+  width: 320px;
+  margin: 0 auto 0 auto;
+  perspective: 1000px;
+}
+
+.carousel-sija {
+  position: block;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d; 
+  animation: rotate360 60s infinite forwards linear;
+}
+.carousel__face { 
+  position: absolute;
+  width: 95%;
+  height: 187px;
+  top: 50px;
+  left: 10px;
+  right: 10px;
+  background-size: cover;
+  box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
+  display: flex;
+}
+
+span {
+  margin: auto;
+  font-size: 2rem;
+}
+
+
+.carousel__face:nth-child(1) {
+  background-image: url("https://images.pexels.com/photos/1141853/pexels-photo-1141853.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(  0deg) translateZ(430px); }
+.carousel__face:nth-child(2) { 
+  background-image: url("https://images.pexels.com/photos/1258865/pexels-photo-1258865.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY( 40deg) translateZ(430px); }
+.carousel__face:nth-child(3) {
+  background-image: url("https://images.pexels.com/photos/808466/pexels-photo-808466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY( 80deg) translateZ(430px); }
+.carousel__face:nth-child(4) {
+  background-image: url("https://images.pexels.com/photos/1394841/pexels-photo-1394841.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(120deg) translateZ(430px); }
+.carousel__face:nth-child(5) { 
+  background-image: url("https://images.pexels.com/photos/969679/pexels-photo-969679.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+ transform: rotateY(160deg) translateZ(430px); }
+.carousel__face:nth-child(6) { 
+  background-image: url("https://images.pexels.com/photos/1834400/pexels-photo-1834400.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+ transform: rotateY(200deg) translateZ(430px); }
+.carousel__face:nth-child(7) { 
+  background-image: url("https://images.pexels.com/photos/1415268/pexels-photo-1415268.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+ transform: rotateY(240deg) translateZ(430px); }
+.carousel__face:nth-child(8) {
+  background-image: url("https://images.pexels.com/photos/135018/pexels-photo-135018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(280deg) translateZ(430px); }
+.carousel__face:nth-child(9) {
+  background-image: url("https://images.pexels.com/photos/1175135/pexels-photo-1175135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  transform: rotateY(320deg) translateZ(430px); }
+
+
+
+@keyframes rotate360 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+
+
 /* * ------------------------------------ VIDEO SECTION ------------------------------------ */
 .video-sija {
   position: relative;
@@ -286,13 +372,18 @@ nav .nav-lists {
   align-items: center;
   width: 100%;
   height: 100vh;
-  background: url(../img/davide-cantelli-jpkfc5_d-DI-unsplash.jpg);
+  background: url(../img/thumbnail.png);
   background-size: cover;
   background-position: center;
 }
 
 .container-video h1 {
-  color: #fff;
+  color: #000;
+  display: block;
+  text-align: center;
+  background-color: #f9b8c4;
+  padding: 10px;
+  border-radius: 15px;
 }
 
 .container-video .btn {
@@ -389,6 +480,145 @@ nav .nav-lists {
   }
 }
 
+/* * SKILLS / SUBJECTS */
+.skill-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.basic-skill, .core-skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+}
+
+.basic-skill h1, .core-skill h1 {
+  text-align: center;
+  font-size: 2em;
+}
+
+.basic-skill ul, .core-skill ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 30px;
+}
+
+ul.skill-list li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 400px;
+  padding: 20px;
+  box-shadow: 0 0 9px 0 black;
+  border-radius: 20px;
+  transition: 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+@media screen and (max-width:700px) {
+  ul.skill-list {
+      transform: translateX(-5%);
+  }
+}
+
+.basic-skill ul.skill-list li:nth-child(1):hover {
+  background-color:hsla(0,100%,50%,1);
+background-image:
+radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%),
+radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%),
+radial-gradient(at 0% 50%, hsla(355,100%,93%,1) 0px, transparent 50%),
+radial-gradient(at 80% 50%, hsla(340,100%,76%,1) 0px, transparent 50%),
+radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%),
+radial-gradient(at 80% 100%, hsla(242,100%,70%,1) 0px, transparent 50%),
+radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%);
+}
+
+.basic-skill ul.skill-list li:nth-child(2):hover {
+  background-color:#9b99ff;
+background-image:
+radial-gradient(at 42% 96%, hsla(189,88%,66%,1) 0px, transparent 50%),
+radial-gradient(at 74% 95%, hsla(307,78%,68%,1) 0px, transparent 50%),
+radial-gradient(at 45% 64%, hsla(316,84%,63%,1) 0px, transparent 50%),
+radial-gradient(at 15% 63%, hsla(202,94%,61%,1) 0px, transparent 50%),
+radial-gradient(at 26% 92%, hsla(248,94%,61%,1) 0px, transparent 50%),
+radial-gradient(at 24% 37%, hsla(314,91%,60%,1) 0px, transparent 50%),
+radial-gradient(at 62% 40%, hsla(68,80%,77%,1) 0px, transparent 50%);
+}
+.basic-skill ul.skill-list li:nth-child(3):hover {
+  background-color:#ecff99;
+background-image:
+radial-gradient(at 50% 93%, hsla(172,87%,60%,1) 0px, transparent 50%),
+radial-gradient(at 4% 6%, hsla(338,89%,61%,1) 0px, transparent 50%),
+radial-gradient(at 11% 31%, hsla(81,97%,74%,1) 0px, transparent 50%),
+radial-gradient(at 38% 39%, hsla(352,85%,63%,1) 0px, transparent 50%),
+radial-gradient(at 82% 91%, hsla(136,83%,62%,1) 0px, transparent 50%),
+radial-gradient(at 27% 51%, hsla(275,79%,60%,1) 0px, transparent 50%),
+radial-gradient(at 80% 12%, hsla(133,86%,74%,1) 0px, transparent 50%);
+}
+.core-skill ul.skill-list li:nth-child(1):hover {
+  background-color:#ff99e7;
+background-image:
+radial-gradient(at 93% 28%, hsla(56,79%,79%,1) 0px, transparent 50%),
+radial-gradient(at 53% 72%, hsla(214,89%,61%,1) 0px, transparent 50%),
+radial-gradient(at 65% 43%, hsla(128,99%,66%,1) 0px, transparent 50%),
+radial-gradient(at 5% 32%, hsla(214,73%,75%,1) 0px, transparent 50%),
+radial-gradient(at 24% 41%, hsla(106,68%,73%,1) 0px, transparent 50%),
+radial-gradient(at 92% 69%, hsla(10,99%,68%,1) 0px, transparent 50%),
+radial-gradient(at 43% 3%, hsla(323,83%,76%,1) 0px, transparent 50%);
+}
+.core-skill ul.skill-list li:nth-child(2):hover {
+  background-color:#99d5ff;
+background-image:
+radial-gradient(at 71% 68%, hsla(130,63%,62%,1) 0px, transparent 50%),
+radial-gradient(at 81% 6%, hsla(270,80%,64%,1) 0px, transparent 50%),
+radial-gradient(at 77% 69%, hsla(350,86%,74%,1) 0px, transparent 50%),
+radial-gradient(at 82% 70%, hsla(58,78%,65%,1) 0px, transparent 50%),
+radial-gradient(at 38% 37%, hsla(317,66%,70%,1) 0px, transparent 50%),
+radial-gradient(at 13% 94%, hsla(115,64%,68%,1) 0px, transparent 50%),
+radial-gradient(at 35% 17%, hsla(279,65%,71%,1) 0px, transparent 50%);
+}
+.core-skill ul.skill-list li:nth-child(3):hover {
+  background-color:#bbff99;
+background-image:
+radial-gradient(at 41% 96%, hsla(8,79%,61%,1) 0px, transparent 50%),
+radial-gradient(at 36% 67%, hsla(57,69%,62%,1) 0px, transparent 50%),
+radial-gradient(at 59% 19%, hsla(294,64%,62%,1) 0px, transparent 50%),
+radial-gradient(at 47% 41%, hsla(321,70%,78%,1) 0px, transparent 50%),
+radial-gradient(at 49% 29%, hsla(84,62%,65%,1) 0px, transparent 50%),
+radial-gradient(at 95% 14%, hsla(159,83%,79%,1) 0px, transparent 50%),
+radial-gradient(at 85% 23%, hsla(355,73%,77%,1) 0px, transparent 50%);
+}
+.core-skill ul.skill-list li:nth-child(4):hover {
+  background-color:#e099ff;
+background-image:
+radial-gradient(at 88% 77%, hsla(259,84%,69%,1) 0px, transparent 50%),
+radial-gradient(at 68% 24%, hsla(291,86%,65%,1) 0px, transparent 50%),
+radial-gradient(at 94% 75%, hsla(120,96%,73%,1) 0px, transparent 50%),
+radial-gradient(at 11% 68%, hsla(235,66%,79%,1) 0px, transparent 50%),
+radial-gradient(at 23% 83%, hsla(240,90%,76%,1) 0px, transparent 50%),
+radial-gradient(at 40% 92%, hsla(10,81%,70%,1) 0px, transparent 50%),
+radial-gradient(at 31% 12%, hsla(249,69%,76%,1) 0px, transparent 50%);
+}
+.core-skill ul.skill-list li:nth-child(5):hover {
+  background-color:#e799ff;
+background-image:
+radial-gradient(at 32% 78%, hsla(226,63%,71%,1) 0px, transparent 50%),
+radial-gradient(at 66% 18%, hsla(313,96%,70%,1) 0px, transparent 50%),
+radial-gradient(at 80% 21%, hsla(84,90%,65%,1) 0px, transparent 50%),
+radial-gradient(at 47% 36%, hsla(28,81%,69%,1) 0px, transparent 50%),
+radial-gradient(at 25% 0%, hsla(98,86%,71%,1) 0px, transparent 50%),
+radial-gradient(at 1% 45%, hsla(202,81%,76%,1) 0px, transparent 50%),
+radial-gradient(at 66% 97%, hsla(353,72%,60%,1) 0px, transparent 50%);
+}
+
 /* * TABLE ALUMNUS */
 
 .table-alumnus {
@@ -399,7 +629,11 @@ nav .nav-lists {
   /* -webkit-transform: translate(-50%, -50%); */
   /* transform: translate(-50%, -50%); */
   padding: 5% 0;
-  background-color: #beff99;
+  background: url(../img/3d-plant-object.png);
+  background-size: contain;
+  background-position: center;
+
+  /* background-color: #beff99;
   background-image: radial-gradient(
       at 80% 17%,
       hsla(317, 99%, 74%, 1) 0px,
@@ -410,7 +644,7 @@ nav .nav-lists {
     radial-gradient(at 83% 4%, hsla(215, 76%, 62%, 1) 0px, transparent 50%),
     radial-gradient(at 11% 4%, hsla(108, 74%, 79%, 1) 0px, transparent 50%),
     radial-gradient(at 68% 83%, hsla(27, 97%, 60%, 1) 0px, transparent 50%),
-    radial-gradient(at 85% 51%, hsla(56, 76%, 60%, 1) 0px, transparent 50%);
+    radial-gradient(at 85% 51%, hsla(56, 76%, 60%, 1) 0px, transparent 50%); */
   z-index: 4;
 }
 
@@ -425,7 +659,7 @@ nav .nav-lists {
 .table-alumnus th,
 .table-alumnus td {
   padding: 15px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.85);
   color: #fff;
 }
 
@@ -438,7 +672,7 @@ nav .nav-lists {
 }
 
 .table-alumnus tbody tr:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(33, 33, 33, 0.8);
 }
 
 .table-alumnus tbody td {

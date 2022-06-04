@@ -43,7 +43,7 @@ $(document).ready(function () {
   //     imgbutton.addEventListener('')
   // })
   async function loadData(){
-    const response = await fetch('https://raw.githubusercontent.com/Mhmdaris15/SIJA-Website/main/data/alumnus.json?token=GHSAT0AAAAAABRIMWS2JNVOZET3BUHVCRM4YU3FYCA');
+    const response = await fetch('https://github.com/Mhmdaris15/SIJA-Website/blob/main/data/alumnus.json');
     const data = await response.json();
     for (let d of data) {
         let text = `
