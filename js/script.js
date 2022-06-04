@@ -152,7 +152,7 @@ $(document).ready(function () {
 
 setInterval(() => {
   document.querySelector(".up-button").click();
-}, 4000);
+}, 5000);
 
 // * ADAM SECTION
 
