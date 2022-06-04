@@ -128,8 +128,7 @@ close.onclick = function () {
   video.pause();
 };
 
-
-// * FAUZAN SECTION
+// * FAUZAN SECTION --------------------------------------------------------------------------------------------
 
 // --------------------------------------------head of departement-------------------------------------------
 const sliderContainer = document.querySelector(".slider-container");
@@ -185,6 +184,6 @@ $(document).ready(function () {
 
 setInterval(() => {
   document.querySelector(".up-button").click();
-}, 7000);
+}, 5000);
 
 // * ADAM SECTION
