@@ -389,6 +389,149 @@ nav .nav-lists {
   }
 }
 
+/* *------------------------------------------------------------Career Path------------------------------------------------------------------- */
+.career-body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.career-body .career-path {
+  width: 96vw;
+  text-align: center;
+}
+
+.career-body .slick-prev {
+  display: none;
+}
+
+.career-body .slick-next,
+.career-body .slick-prev {
+  /* width: 100px; */
+  margin: 20px;
+}
+
+.career-body .slick-next::before,
+.career-body .slick-prev::before {
+  font-size: 30px;
+  color: black;
+}
+
+.career-body .career-path .container.dog-cards {
+  display: flex;
+  /* margin-top: -220px !important; */
+  /* margin-bottom: 50px; */
+}
+.career-body .career-path .dog-cards .card {
+  height: 25em;
+  width: 20em;
+  margin: 50px;
+  box-shadow: 5px 5px 20px rgb(0, 0, 0);
+  overflow: hidden;
+  position: relative;
+}
+.career-body .career-path .dog-cards .card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 3px;
+}
+.career-body .career-path .dog-cards .intro {
+  height: 80px;
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0px;
+  background: rgb(27, 27, 27, 0.5);
+  color: white;
+  transition: 0.9s;
+}
+.career-body .career-path .dog-cards .intro h1 {
+  margin: 10px;
+  font-size: 1.75em;
+}
+.career-body .career-path .dog-cards .intro p {
+  font-size: 15px;
+  margin-top: 25px;
+  margin-right: 120px;
+  margin-left: -40px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.career-body .career-path .dog-cards .card:hover {
+  cursor: pointer;
+}
+.career-body .career-path .dog-cards .card:hover .intro {
+  height: 220px;
+  bottom: 0px;
+  background: rgba(0, 139, 253, 0.699);
+}
+.career-body .career-path .dog-cards .card:hover p {
+  opacity: 1;
+  visibility: visible;
+}
+
+.career-body .career-path .dog-cards .introview {
+  height: 260px;
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0px;
+  left: 34%;
+  color: white;
+}
+@media (min-width: 600px) {
+  .career-body .career-path .container .intro {
+    padding-bottom: 6em;
+  }
+}
+
+@media (min-width: 900px) {
+  .career-body .career-path .container .intro {
+    padding-bottom: 4em;
+  }
+}
+
+@media (max-width: 470px) {
+  .career-body .career-path .container .intro {
+    padding-bottom: 4em;
+  }
+}
+
+@media (max-width: 419px) {
+  .career-body .career-path .container .intro {
+    padding-bottom: 6em;
+  }
+}
+
+.career-body .career-path .buttons-card {
+  /* margin: 0 15% 0 28%; */
+  display: flex;
+  /* justify-content: space-between; */
+  text-align: center;
+}
+.career-body .career-path .buttons-card * {
+  background-color: #054aeb;
+  padding: 15px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.career-body .career-path .buttons-card *:hover {
+  background-color: #1a49ba;
+}
+
+.career-body .career-path .buttons-card a {
+  text-decoration: none;
+  color: #f0ffff;
+  font-weight: 900;
+}
+
 /* * TABLE ALUMNUS */
 
 .table-alumnus {
