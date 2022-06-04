@@ -1167,41 +1167,41 @@ footer .logo3 {
 
 /* ! ------------------------------------ CARD PAGE ------------------------------------ */
 
-
-.container.cat-cards{
+.container.cat-cards {
   display: flex;
   /* margin-top: -220px !important; */
   margin-bottom: 50px;
 }
-.cat-cards .card{
+.cat-cards .card {
   height: 500px;
-  width: 350px ;
+  width: 350px;
   margin: 50px;
-  box-shadow: 5px 5px 20px  black;
+  box-shadow: 5px 5px 20px black;
   overflow: hidden;
   position: relative;
 }
-.cat-cards .card img{
-  height: 500px;
-  width: 350px;
+.cat-cards .card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
   border-radius: 3px;
 }
-.cat-cards .intro{
+.cat-cards .intro {
   height: 80px;
   width: 100%;
   padding: 6px;
   box-sizing: border-box;
   position: absolute;
   bottom: 0px;
-  background: rgb(27, 27, 27, .5);
+  background: rgb(27, 27, 27, 0.5);
   color: white;
-  transition: .9s;
+  transition: 0.9s;
 }
-.cat-cards .intro h1{
+.cat-cards .intro h1 {
   margin: 10px;
   font-size: 35pxx;
-} 
-.cat-cards .intro p{
+}
+.cat-cards .intro p {
   font-size: 15px;
   margin-top: 25px;
   margin-right: 120px;
@@ -1210,20 +1210,20 @@ footer .logo3 {
   opacity: 0;
 }
 
-.cat-cards .card:hover{
+.cat-cards .card:hover {
   cursor: pointer;
 }
-.cat-cards .card:hover .intro{
+.cat-cards .card:hover .intro {
   height: 220px;
   bottom: 0px;
   background: rgba(0, 0, 0, 0.603);
 }
-.cat-cards .card:hover p{
+.cat-cards .card:hover p {
   opacity: 1;
   visibility: visible;
 }
 
-.cat-cards .introview{
+.cat-cards .introview {
   height: 260px;
   width: 100%;
   padding: 6px;
@@ -1234,7 +1234,7 @@ footer .logo3 {
   color: white;
 }
 @media (max-width: 600px) {
-  .cat-cards .introview{
+  .cat-cards .introview {
     left: 25%;
   }
 }
@@ -1251,7 +1251,7 @@ footer .logo3 {
   cursor: pointer;
 }
 
-.buttons-card *:hover{
+.buttons-card *:hover {
   background-color: #1a49ba;
 }
 
