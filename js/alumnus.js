@@ -1,5 +1,5 @@
 async function loadData(){
-    const response = await fetch('../data/alumnus.json');
+    const response = await fetch('https://raw.githubusercontent.com/Mhmdaris15/SIJA-Website/main/data/alumnus.json?token=GHSAT0AAAAAABRIMWS2JNVOZET3BUHVCRM4YU3FYCA');
     const data = await response.json();
     for (let d of data) {
         let text = `
