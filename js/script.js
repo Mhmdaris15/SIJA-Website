@@ -187,3 +187,4 @@ setInterval(() => {
 }, 5000);
 
 // * ADAM SECTION
+
