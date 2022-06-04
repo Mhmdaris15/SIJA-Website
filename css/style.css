@@ -681,7 +681,7 @@ nav .nav-lists {
 .head-departement .slider-container .left-slide section {
   margin-bottom: 30px;
   text-align: center;
-  z-index: 49;
+  z-index: 100;
 }
 
 .head-departement .slider-container .left-slide h1 {
@@ -725,7 +725,7 @@ nav .nav-lists {
 }
 
 .head-departement .slider-container .right-slide .quotes {
-  z-index: 49;
+  z-index: 100;
 }
 
 .head-departement .slider-container .right-slide > div::after {
@@ -741,7 +741,7 @@ nav .nav-lists {
   position: absolute;
   left: 35%;
   top: 50%;
-  z-index: 49;
+  z-index: 100;
 }
 
 .head-departement .slider-container .action-buttons .down-button {
@@ -810,7 +810,7 @@ nav .nav-lists {
 .training-partner .container .title {
   padding: 0 5px;
   padding-top: 50px;
-  font-size: 25px;
+  font-size: 2em;
   font-weight: bold;
   margin-bottom: 50px;
   min-height: 100px;
@@ -832,33 +832,60 @@ nav .nav-lists {
   }
 }
 
-.training-partner .logo .partner img {
-  width: 70px;
-  border: 2px dashed grey;
-  border-radius: 50%;
+.training-partner .container .logo .box {
+  width: 200px;
+  height: 100px;
 }
 
-.training-partner .logo .box .caption {
-  margin: 0 50px 0 10px;
+.training-partner .logo .partner img {
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+  /* padding: 10px; */
+  /* border: 2px dashed grey; */
+  /* border-radius: 50%; */
+}
+
+.training-partner .logo .partner .jkom {
+  background-color: rgba(0, 0, 0, 0.483);
 }
 
 .training-partner .partner {
   display: flex;
   justify-content: center;
   padding: 0 10px;
+  margin: 3em 0;
+  flex-wrap: wrap;
 }
 
-@media (max-width: 743px) {
+.training-partner .partner a {
+  color: black;
+  text-decoration: none;
+}
+
+/* @media (max-width: 743px) {
   .training-partner .partner {
     display: block;
   }
-}
+} */
 
 .training-partner .partner .box {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px 0;
+  flex-direction: column;
+  text-align: center;
+  margin: 3em 2em;
+}
+
+.training-partner .partner .box .caption {
+  margin-top: 1em;
+}
+
+.training-partner .head-certificate {
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 4em;
 }
 
 .training-partner .logo .certificate {
@@ -869,7 +896,7 @@ nav .nav-lists {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
+  /* gap: 20px; */
 }
 
 @media (max-width: 700px) {
@@ -877,14 +904,20 @@ nav .nav-lists {
     /* height: 1000px; */
     margin-bottom: 5em;
   }
+
+  .training-partner .logo .partner .box {
+    margin-top: 2em;
+  }
 }
 
 .training-partner .logo .certificate img {
-  width: 200px;
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
   padding: 10px 50px;
-  margin: 0 20px 0 20px;
+  /* margin: 0 20px 0 20px; */
   border-radius: 3px;
-  border: 2px solid #b9b0b062;
+  /* border: 2px solid #b9b0b062; */
 }
 
 /*--------------------------------------------------------------------------- footer-------------------------------------------------------------- */
@@ -1011,8 +1044,9 @@ footer .logo1 {
   bottom: 0px;
   right: 0px;
   width: 7em;
+  height: 7em;
   border-radius: 50%;
-  padding: 10px;
+  /* padding: 10px; */
   background-color: white;
   z-index: 10;
 }
@@ -1073,11 +1107,11 @@ footer .logo3 {
   }
 } */
 
-@media (min-height: 800px) {
+/* @media (min-height: 800px) {
   footer {
     height: 80vh;
   }
-}
+} */
 
 @media (max-width: 700px) {
   /* footer .logo {
@@ -1085,10 +1119,26 @@ footer .logo3 {
     height: 85px;
     background-color: #ffffff;
   } */
-  footer .logo1,
+  footer .logo1 {
+    width: 5em;
+    height: 5em;
+    bottom: 0px;
+    right: 0;
+    padding: 0;
+    border-radius: 50%;
+    /* border: none; */
+    /* background-color: rgba(255, 255, 255, 0); */
+  }
+
+  footer .logo3,
+  footer .logo2 {
+    display: none;
+  }
+
+  /* footer .logo1,
   footer .logo2,
   footer .logo3 {
-    width: 6em;
+    width: 5em;
   }
   footer .logo1 {
     bottom: 0px;
@@ -1101,7 +1151,7 @@ footer .logo3 {
   footer .logo3 {
     bottom: 0px;
     right: 0;
-  }
+  } */
 }
 
 /* @media screen and (max-width: 300px) {
