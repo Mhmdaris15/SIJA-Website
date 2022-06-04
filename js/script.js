@@ -46,7 +46,7 @@ $(document).ready(function () {
     const response = await fetch('https://github.com/Mhmdaris15/SIJA-Website/blob/main/data/alumnus.json');
     const data = await response.json();
     for (let d of data) {
-        let text = `
+      let text = `
         <div class="alumnus-card-parent">
         <div class="top-card"><ul class="dots">
             <li class="dot"></li>
@@ -64,49 +64,49 @@ $(document).ready(function () {
       </div>
       </div>            
         `;
-        let alumnusCards = document.querySelector('.alumnus-cards');
-        alumnusCards.insertAdjacentHTML("afterbegin", text);
-        setTimeout(()=> {
-          $('.alumnus-cards').slick({
-            dots: true,
-            infinite: true,
-            // arrows:false,
-            speed: 300,
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            responsive: [
-              {
-                breakpoint: 1024,
-                settings: {
-                  slidesToShow: 2,
-                  slidesToScroll: 1,
-                  infinite: true,
-                  dots: true
-                }
+      let alumnusCards = document.querySelector(".alumnus-cards");
+      alumnusCards.insertAdjacentHTML("afterbegin", text);
+      setTimeout(() => {
+        $(".alumnus-cards").slick({
+          dots: true,
+          infinite: true,
+          // arrows:false,
+          speed: 300,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true,
               },
-              {
-                breakpoint: 600,
-                settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1
-                }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
               },
-              {
-                breakpoint: 480,
-                settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1
-                }
-              }
-              // You can unslick at a given breakpoint now by adding:
-              // settings: "unslick"
-              // instead of a settings object
-            ]
-          });
-        }, 1000)
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+          ],
+        });
+      }, 1000);
     }
-}
-loadData();
+  }
+  loadData();
 });
 
 let btn = document.querySelector(".btn");
@@ -127,6 +127,41 @@ close.onclick = function () {
 };
 
 // * FAUZAN SECTION --------------------------------------------------------------------------------------------
+
+// -----------------------------------------------career path---------------------------------------------------
+$(".career-cards").slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  arrows: false,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        infinite: true,
+        dots: true,
+      },
+    },
+    // {
+    //   breakpoint: 600,
+    //   settings: {
+    //     slidesToShow: 2,
+    //     slidesToScroll: 2,
+    //   },
+    // },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+});
 
 // --------------------------------------------head of departement-------------------------------------------
 const sliderContainer = document.querySelector(".slider-container");
@@ -185,4 +220,38 @@ setInterval(() => {
 }, 5000);
 
 // * ADAM SECTION
-
+$(".ach-cards").slick({
+  dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        infinite: true,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ],
+});
