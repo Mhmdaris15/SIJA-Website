@@ -42,41 +42,73 @@ $(document).ready(function () {
   // imgButtons.forEach(imgbutton => {
   //     imgbutton.addEventListener('')
   // })
-  $('.alumnus-cards').slick({
-    dots: true,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
-    ]
-  });
+  async function loadData(){
+    const response = await fetch('../data/alumnus.json');
+    const data = await response.json();
+    for (let d of data) {
+        let text = `
+        <div class="alumnus-card-parent">
+        <div class="top-card"><ul class="dots">
+            <li class="dot"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+        </ul></div>
+        <div class="alumnus-card">
+          <div class="photo"><img src=${d.photo} alt="Photo Profile"></div>
+          <div class="biodata">
+              <div class="name">${d.name}</div>
+              <div class="job">${d.job}</div>
+              <div class="salary">${d.salary}</div>
+              <div class="company"><i class="fa-solid fa-building"></i> ${d.company}</div>
+          </div>
+      </div>
+      </div>            
+        `;
+        let alumnusCards = document.querySelector('.alumnus-cards');
+        alumnusCards.insertAdjacentHTML("afterbegin", text);
+        setTimeout(()=> {
+          $('.alumnus-cards').slick({
+            dots: true,
+            infinite: true,
+            // arrows:false,
+            speed: 300,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1,
+                  infinite: true,
+                  dots: true
+                }
+              },
+              {
+                breakpoint: 600,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+              },
+              {
+                breakpoint: 480,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+              }
+              // You can unslick at a given breakpoint now by adding:
+              // settings: "unslick"
+              // instead of a settings object
+            ]
+          });
+        }, 1000)
+    }
+}
+  loadData();
+
+
 });
 
 let btn = document.querySelector(".btn");

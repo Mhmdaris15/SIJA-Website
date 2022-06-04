@@ -143,6 +143,14 @@ section.alumnus-carousel {
     padding: 5em 0;
 }
 
+/* .alumnus-carousel .slick-list .slick-track{
+    min-width: 100% !important;
+} */
+
+.alumnus-carousel .slick-arrow {
+    display: none;
+}
+
 @media screen and (max-width: 743px){
     .alumnus-card-parent {
         width: 100%;
@@ -150,4 +158,21 @@ section.alumnus-carousel {
     .alumnus-card-parent {
         flex-direction: column;
     }
+}
+
+@media screen and (max-width: 395px){
+    .alumnus-card {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .alumnus-card .biodata {
+        width: 100%;
+        margin: 0;
+    }
+    .alumnus-card .biodata * {
+        width: 100%;
+    }
+
 }
