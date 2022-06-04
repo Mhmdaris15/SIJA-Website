@@ -590,8 +590,13 @@ nav .nav-lists {
 /* TODO FAUZAN SECTION */
 
 /* ---------------------------------------------------------------------!Head of departement ---------------------------------------------------*/
+<<<<<<< Updated upstream
 .head-departement .mobile-slider {
   display: none;
+=======
+.mobile-slider {
+  display: none !important;
+>>>>>>> Stashed changes
   width: 100vw;
   /* min-height: 120vh; */
   color: white;
@@ -638,8 +643,13 @@ nav .nav-lists {
   .head-departement .slider-container {
     display: none;
   }
+<<<<<<< Updated upstream
   .head-departement .mobile-slider {
     display: flex;
+=======
+  .mobile-slider {
+    display: flex !important;
+>>>>>>> Stashed changes
     position: relative;
   }
 }
