@@ -1,6 +1,6 @@
 .alumnus-cards {
     margin: auto;
-    width: 100%;
+    width: 82vw;
     display: flex;
     flex-wrap: wrap;
     gap: 40px 20px;
@@ -52,17 +52,6 @@
 
 }
 
-/* .alumnus-card::before {
-    content: "";
-    position: absolute;
-    height: 15%;
-    width: 100%;
-    border-radius: 20px 20px 0 0;
-    background-color: black;
-    transform: translate(-50px, -70px);
-    z-index: -1;
-} */
-
 .alumnus-card .photo {
     display: flex;
     justify-content: baseline;
@@ -74,6 +63,23 @@
     overflow: hidden;
     border: 1px solid #000;
 }
+
+.alumnus-card-parent.view-all a{
+    text-decoration: none;
+    /* display: block; */
+    padding: 1em 1.5em;
+    background-color: #000;
+    color: #ffffff;
+    border-radius: 4em;
+}
+.alumnus-card-parent.view-all {
+    height: 14em;
+}
+.alumnus-card-parent.view-all .top-card {
+    height: 14%;
+}
+
+
 
 .alumnus-card img {
     width: 100%;
@@ -137,15 +143,11 @@
 }
 
 section.alumnus-carousel {
-    background-image: url(../img/hand-drawn-abstract-doodle.jpg);
+    background-image: url(../img/bg1.jpg);
     background-size: cover;
     background-position: center;
     padding: 5em 0;
 }
-
-/* .alumnus-carousel .slick-list .slick-track{
-    min-width: 100% !important;
-} */
 
 .alumnus-carousel .slick-arrow {
     display: none;
@@ -157,6 +159,9 @@ section.alumnus-carousel {
     }
     .alumnus-card-parent {
         flex-direction: column;
+    }
+    .alumnus-carousel .slick-dots {
+        margin-bottom: 4em;
     }
 }
 
@@ -176,3 +181,11 @@ section.alumnus-carousel {
     }
 
 }
+
+/* !-----------------------------------------------------------SLICK SLIDER WIDTH----------------------------------------- */
+.slick-slider {
+    max-width: 90vw;
+  }
+  .mobile-slider .slick {
+    Max-width: 100vw;
+  }

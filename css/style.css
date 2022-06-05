@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&family=Quicksand:wght@300;400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bakbak+One&family=Barlow:wght@600&family=Bebas+Neue&family=Fraunces:wght@700&family=Lobster&family=Open+Sans:wght@300&family=Oswald:wght@600&family=Outfit:wght@300;400;500&family=Pacifico&family=Poppins:wght@100;400;600&family=Praise&family=Press+Start+2P&family=Redacted+Script:wght@400;700&family=Source+Code+Pro:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
   box-sizing: border-box;
-  font-family: "Quicksand", "PT Sans", "Plus Jakarta Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 html {
@@ -33,8 +34,14 @@ header {
   width: 100%;
   height: 100vh;
   /* position: absolute; */
-  background-color: aqua;
+  background-color: #F0FFFF;
+  /* background: url(../img/bg1.jpg); */
+  background-size: cover;
+  background-position: center;
   grid-template-columns: repeat(2, 50%);
+}
+header * {
+  font-family: "Quicksand", "PT Sans", "Plus Jakarta Sans", sans-serif !important;
 }
 
 .left-side {
@@ -69,14 +76,20 @@ header {
 }
 
 .text h1 {
-  font-size: 70px;
+  font-size: 3em;
   font-weight: 600;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   text-underline-offset: 15px;
+  font-weight: 400;
+}
+.text span {
+  font-weight: 900;
 }
 
 .text p {
   line-height: 1.5;
+  display: block;
+  padding: 20px 0;
 }
 
 .buttons {
@@ -286,13 +299,30 @@ nav .nav-lists {
   align-items: center;
   width: 100%;
   height: 100vh;
-  background: url(../img/davide-cantelli-jpkfc5_d-DI-unsplash.jpg);
+  background: url(../img/thumbnail.png);
   background-size: cover;
   background-position: center;
 }
 
+@media screen and (max-width: 500px) {
+  .container-video {
+    height: 50vh;
+    background-size: cover;
+    background-repeat: repeat-y;
+  }
+  .container-video h1 {
+    margin: 0 40px 20px;
+    font-size: small;
+  }
+}
+
 .container-video h1 {
-  color: #fff;
+  color: #000;
+  display: block;
+  text-align: center;
+  background-color: #f9b8c4;
+  padding: 10px;
+  border-radius: 15px;
 }
 
 .container-video .btn {
@@ -389,6 +419,176 @@ nav .nav-lists {
   }
 }
 
+/* * ------------------------------------ SKILLS / SUBJECTS ------------------------------------ */
+.skill-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+}
+
+@media screen and (max-width: 600px) {
+}
+
+.basic-skill,
+.core-skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+}
+
+.basic-skill h1,
+.core-skill h1 {
+  text-align: center;
+  font-size: 2em;
+}
+
+.basic-skill ul,
+.core-skill ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 30px;
+}
+
+ul.skill-list li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 400px;
+  padding: 20px;
+  box-shadow: 0 0 9px 0 black;
+  border-radius: 20px;
+  transition: 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+@media screen and (max-width: 700px) {
+  ul.skill-list {
+    transform: translateX(-5%);
+  }
+}
+
+.basic-skill ul.skill-list li:nth-child(1):hover {
+  background-color: hsla(0, 100%, 50%, 1);
+  background-image: radial-gradient(
+      at 40% 20%,
+      hsla(28, 100%, 74%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(355, 100%, 93%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, hsla(340, 100%, 76%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(22, 100%, 77%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, hsla(242, 100%, 70%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0px, transparent 50%);
+}
+
+.basic-skill ul.skill-list li:nth-child(2):hover {
+  background-color: #9b99ff;
+  background-image: radial-gradient(
+      at 42% 96%,
+      hsla(189, 88%, 66%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 74% 95%, hsla(307, 78%, 68%, 1) 0px, transparent 50%),
+    radial-gradient(at 45% 64%, hsla(316, 84%, 63%, 1) 0px, transparent 50%),
+    radial-gradient(at 15% 63%, hsla(202, 94%, 61%, 1) 0px, transparent 50%),
+    radial-gradient(at 26% 92%, hsla(248, 94%, 61%, 1) 0px, transparent 50%),
+    radial-gradient(at 24% 37%, hsla(314, 91%, 60%, 1) 0px, transparent 50%),
+    radial-gradient(at 62% 40%, hsla(68, 80%, 77%, 1) 0px, transparent 50%);
+}
+.basic-skill ul.skill-list li:nth-child(3):hover {
+  background-color: #ecff99;
+  background-image: radial-gradient(
+      at 50% 93%,
+      hsla(172, 87%, 60%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 4% 6%, hsla(338, 89%, 61%, 1) 0px, transparent 50%),
+    radial-gradient(at 11% 31%, hsla(81, 97%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 38% 39%, hsla(352, 85%, 63%, 1) 0px, transparent 50%),
+    radial-gradient(at 82% 91%, hsla(136, 83%, 62%, 1) 0px, transparent 50%),
+    radial-gradient(at 27% 51%, hsla(275, 79%, 60%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 12%, hsla(133, 86%, 74%, 1) 0px, transparent 50%);
+}
+.core-skill ul.skill-list li:nth-child(1):hover {
+  background-color: #ff99e7;
+  background-image: radial-gradient(
+      at 93% 28%,
+      hsla(56, 79%, 79%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 53% 72%, hsla(214, 89%, 61%, 1) 0px, transparent 50%),
+    radial-gradient(at 65% 43%, hsla(128, 99%, 66%, 1) 0px, transparent 50%),
+    radial-gradient(at 5% 32%, hsla(214, 73%, 75%, 1) 0px, transparent 50%),
+    radial-gradient(at 24% 41%, hsla(106, 68%, 73%, 1) 0px, transparent 50%),
+    radial-gradient(at 92% 69%, hsla(10, 99%, 68%, 1) 0px, transparent 50%),
+    radial-gradient(at 43% 3%, hsla(323, 83%, 76%, 1) 0px, transparent 50%);
+}
+.core-skill ul.skill-list li:nth-child(2):hover {
+  background-color: #99d5ff;
+  background-image: radial-gradient(
+      at 71% 68%,
+      hsla(130, 63%, 62%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 81% 6%, hsla(270, 80%, 64%, 1) 0px, transparent 50%),
+    radial-gradient(at 77% 69%, hsla(350, 86%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 82% 70%, hsla(58, 78%, 65%, 1) 0px, transparent 50%),
+    radial-gradient(at 38% 37%, hsla(317, 66%, 70%, 1) 0px, transparent 50%),
+    radial-gradient(at 13% 94%, hsla(115, 64%, 68%, 1) 0px, transparent 50%),
+    radial-gradient(at 35% 17%, hsla(279, 65%, 71%, 1) 0px, transparent 50%);
+}
+.core-skill ul.skill-list li:nth-child(3):hover {
+  background-color: #bbff99;
+  background-image: radial-gradient(
+      at 41% 96%,
+      hsla(8, 79%, 61%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 36% 67%, hsla(57, 69%, 62%, 1) 0px, transparent 50%),
+    radial-gradient(at 59% 19%, hsla(294, 64%, 62%, 1) 0px, transparent 50%),
+    radial-gradient(at 47% 41%, hsla(321, 70%, 78%, 1) 0px, transparent 50%),
+    radial-gradient(at 49% 29%, hsla(84, 62%, 65%, 1) 0px, transparent 50%),
+    radial-gradient(at 95% 14%, hsla(159, 83%, 79%, 1) 0px, transparent 50%),
+    radial-gradient(at 85% 23%, hsla(355, 73%, 77%, 1) 0px, transparent 50%);
+}
+.core-skill ul.skill-list li:nth-child(4):hover {
+  background-color: #e099ff;
+  background-image: radial-gradient(
+      at 88% 77%,
+      hsla(259, 84%, 69%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 68% 24%, hsla(291, 86%, 65%, 1) 0px, transparent 50%),
+    radial-gradient(at 94% 75%, hsla(120, 96%, 73%, 1) 0px, transparent 50%),
+    radial-gradient(at 11% 68%, hsla(235, 66%, 79%, 1) 0px, transparent 50%),
+    radial-gradient(at 23% 83%, hsla(240, 90%, 76%, 1) 0px, transparent 50%),
+    radial-gradient(at 40% 92%, hsla(10, 81%, 70%, 1) 0px, transparent 50%),
+    radial-gradient(at 31% 12%, hsla(249, 69%, 76%, 1) 0px, transparent 50%);
+}
+.core-skill ul.skill-list li:nth-child(5):hover {
+  background-color: #e799ff;
+  background-image: radial-gradient(
+      at 32% 78%,
+      hsla(226, 63%, 71%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 66% 18%, hsla(313, 96%, 70%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 21%, hsla(84, 90%, 65%, 1) 0px, transparent 50%),
+    radial-gradient(at 47% 36%, hsla(28, 81%, 69%, 1) 0px, transparent 50%),
+    radial-gradient(at 25% 0%, hsla(98, 86%, 71%, 1) 0px, transparent 50%),
+    radial-gradient(at 1% 45%, hsla(202, 81%, 76%, 1) 0px, transparent 50%),
+    radial-gradient(at 66% 97%, hsla(353, 72%, 60%, 1) 0px, transparent 50%);
+}
+
 /* *------------------------------------------------------------Career Path------------------------------------------------------------------- */
 .career-body {
   width: 100%;
@@ -401,6 +601,10 @@ nav .nav-lists {
 .career-body .career-path {
   width: 96vw;
   text-align: center;
+}
+
+.career-body .career-path .slick-slider {
+  width: 90vw;
 }
 
 .career-body .slick-prev {
@@ -439,7 +643,7 @@ nav .nav-lists {
   border-radius: 3px;
 }
 .career-body .career-path .dog-cards .intro {
-  height: 80px;
+  height: 90px;
   width: 100%;
   padding: 6px;
   box-sizing: border-box;
@@ -466,7 +670,7 @@ nav .nav-lists {
   cursor: pointer;
 }
 .career-body .career-path .dog-cards .card:hover .intro {
-  height: 220px;
+  height: 265px;
   bottom: 0px;
   background: rgba(0, 139, 253, 0.699);
 }
@@ -542,7 +746,11 @@ nav .nav-lists {
   /* -webkit-transform: translate(-50%, -50%); */
   /* transform: translate(-50%, -50%); */
   padding: 5% 0;
-  background-color: #beff99;
+  background: url(../img/3d-plant-object.png);
+  background-size: contain;
+  background-position: center;
+
+  /* background-color: #beff99;
   background-image: radial-gradient(
       at 80% 17%,
       hsla(317, 99%, 74%, 1) 0px,
@@ -553,7 +761,7 @@ nav .nav-lists {
     radial-gradient(at 83% 4%, hsla(215, 76%, 62%, 1) 0px, transparent 50%),
     radial-gradient(at 11% 4%, hsla(108, 74%, 79%, 1) 0px, transparent 50%),
     radial-gradient(at 68% 83%, hsla(27, 97%, 60%, 1) 0px, transparent 50%),
-    radial-gradient(at 85% 51%, hsla(56, 76%, 60%, 1) 0px, transparent 50%);
+    radial-gradient(at 85% 51%, hsla(56, 76%, 60%, 1) 0px, transparent 50%); */
   z-index: 4;
 }
 
@@ -568,7 +776,7 @@ nav .nav-lists {
 .table-alumnus th,
 .table-alumnus td {
   padding: 15px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.85);
   color: #fff;
 }
 
@@ -581,7 +789,7 @@ nav .nav-lists {
 }
 
 .table-alumnus tbody tr:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(33, 33, 33, 0.8);
 }
 
 .table-alumnus tbody td {
@@ -609,9 +817,10 @@ nav .nav-lists {
   }
 }
 
-@media screen and (max-width: 743px) {
+@media screen and (max-width: 900px) {
   .grid-header {
-    height: 200vh;
+    /* height: 200vh; */
+    min-height: 220vh;
     /* display: flex; */
     /* flex-direction: column; */
     grid-template-columns: 100%;
@@ -631,7 +840,7 @@ nav .nav-lists {
   .left-side {
     display: flex;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
   }
 
   .right-side {
@@ -659,9 +868,9 @@ nav .nav-lists {
   }
 
   .text {
-    margin: 200px auto 0;
+    margin: 10em auto 0;
     text-align: center;
-    padding: 0 2%;
+    padding: 0 7%;
   }
 
   .text h1 {
@@ -738,6 +947,10 @@ nav .nav-lists {
   width: 100vw;
   /* min-height: 120vh; */
   color: white;
+}
+
+.head-departement .slick-slider {
+  max-width: 100vw;
 }
 
 .head-departement .mobile-slider > div {
@@ -819,6 +1032,11 @@ nav .nav-lists {
   height: 100%;
   width: 100%;
   background-color: #00000077;
+}
+
+.head-departement .mobile-slider .content {
+  background-size: cover;
+  background-position: center;
 }
 
 .head-departement .slider-container .left-slide section {
@@ -1308,7 +1526,7 @@ footer .logo3 {
   }
 } */
 
-/* ! ------------------------------------ CARD PAGE ------------------------------------ */
+/* ! ------------------------------------ CARD PAGE ACHIEVEMENTS ------------------------------------ */
 
 .container.cat-cards {
   display: flex;
@@ -1326,6 +1544,7 @@ footer .logo3 {
 .cat-cards .card img {
   height: 100%;
   width: 100%;
+  margin: auto;
   object-fit: cover;
   border-radius: 3px;
 }
@@ -1402,4 +1621,9 @@ footer .logo3 {
   text-decoration: none;
   color: #f0ffff;
   font-weight: 900;
+}
+
+/* !-----------------------------------------------------------SLICK SLIDER WIDTH----------------------------------------- */
+.slick-slider {
+  max-width: 90vw;
 }

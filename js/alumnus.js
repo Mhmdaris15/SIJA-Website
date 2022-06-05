@@ -1,5 +1,5 @@
 async function loadData(){
-    const response = await fetch('https://raw.githubusercontent.com/Mhmdaris15/SIJA-Website/main/data/alumnus.json?token=GHSAT0AAAAAABRIMWS2JNVOZET3BUHVCRM4YU3FYCA');
+    const response = await fetch('https://raw.githubusercontent.com/Mhmdaris15/SIJA-Website/main/data/alumnus.json');
     const data = await response.json();
     for (let d of data) {
         let text = `
@@ -24,35 +24,8 @@ async function loadData(){
         container.insertAdjacentHTML("beforeend", text);
     }
 }
-async function addAlumnusSlick(){
-    const response = await fetch('../data/alumnus.json');
-    const data = await response.json();
-    for (let d of data) {
-        let text = `
-      <div class="alumnus-card-parent slick-slide slick-cloned" data-slick-index="-2" id="" aria-hidden="true" tabindex="-1" style="width: 346px;">
-        <div class="top-card"><ul class="dots">
-            <li class="dot"></li>
-            <li class="dot"></li>
-            <li class="dot"></li>
-        </ul></div>
-        <div class="alumnus-card">
-          <div class="photo"><img src=${d.photo} alt="Photo Profile"></div>
-          <div class="biodata">
-              <div class="name">${d.name}</div>
-              <div class="job">${d.job}</div>
-              <div class="salary">${d.salary}</div>
-              <div class="company"><i class="fa-solid fa-building"></i>${d.company}</div>
-          </div>
-      </div>
-      </div>         
-        `;
-        let container = document.querySelector('.alumnus-carousel');
-        container.insertAdjacentHTML("beforeend", text);
-    }
-}
 
 loadData();
-// addAlumnusSlick();
 
 $(document).ready(function () {
     $(".down-side").slick({

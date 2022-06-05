@@ -31,23 +31,13 @@ $(document).ready(function () {
     menu.style.display = "none";
   });
 
-  // const descImgButton = ['Camera House', 'Rocket Launcher', 'Person with The Dog', 'Medical Checkup'];
-  // console.log(imgButtons);
-  // for(let i=0; i < descImgButton.length; i++){
-  //     newDesc = document.createElement('p');
-  //     newDesc.innerText = descImgButton[i];
-  //     imgButtons[i].appendChild(newDesc);
-  // }
 
-  // imgButtons.forEach(imgbutton => {
-  //     imgbutton.addEventListener('')
-  // })
   async function loadData() {
     const response = await fetch(
-      "https://raw.githubusercontent.com/Mhmdaris15/SIJA-Website/main/data/alumnus.json?token=GHSAT0AAAAAABRIMWS2JNVOZET3BUHVCRM4YU3FYCA"
+      "https://raw.githubusercontent.com/Mhmdaris15/SIJA-Website/main/data/alumnus.json"
     );
     const data = await response.json();
-    for (let d of data) {
+    for (let d of data.slice(0,3)) {
       let text = `
         <div class="alumnus-card-parent">
         <div class="top-card"><ul class="dots">
@@ -71,7 +61,7 @@ $(document).ready(function () {
       setTimeout(() => {
         $(".alumnus-cards").slick({
           dots: true,
-          infinite: true,
+          infinite: false,
           // arrows:false,
           speed: 300,
           slidesToShow: 2,
@@ -137,7 +127,7 @@ $(".career-cards").slick({
   speed: 300,
   arrows: false,
   slidesToShow: 3,
-  slidesToScroll: 1,
+  slidesToScroll: 3,
   responsive: [
     {
       breakpoint: 1024,
@@ -219,7 +209,7 @@ $(document).ready(function () {
 
 setInterval(() => {
   document.querySelector(".up-button").click();
-}, 5000);
+}, 10000);
 
 // * ADAM SECTION
 $(".ach-cards").slick({

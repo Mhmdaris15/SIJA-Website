@@ -1,5 +1,29 @@
 // * ARIS SECTION
 
+async function loadData(){
+  // const response = await fetch('https://raw.githubusercontent.com/Mhmdaris15/SIJA-Website/main/data/alumnus.json');
+  const response = await fetch("../data/achievements.json");
+  const data = await response.json();
+  for (let d of data) {
+      let text = `
+      <div class="card">
+            <img src=${d.img} alt="cat">
+            <div class="intro">
+                <h1>
+                    <center>${d.rank}</center>
+                </h1>
+                <p>
+                    <center>${d.description}</center>
+                </p>
+            </div>
+        </div>
+      `;
+      let container = document.querySelector('.cat-cards');
+      container.insertAdjacentHTML("beforeend", text);
+  }
+}
+loadData();
+
 $(document).ready(function () {
   $(".down-side").slick({
     dots: true,
@@ -31,6 +55,9 @@ $(document).ready(function () {
     menu.style.display = "none";
   });
 });
+
+
+
 
 // $(".ach-cards").slick({
 //   dots: true,
