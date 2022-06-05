@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 [
     {
         "rank":"Juara 3",
@@ -75,3 +76,28 @@
         "img":"img/achievement%20(18).jpg"
     }
 ]
+||||||| constructed merge base
+=======
+[
+    {
+        "rank":"Juara 2",
+        "description":"Adelia - juara 2 IT-EXPO UNJ 2019"
+    },
+    {
+        "rank":"Juara 3",
+        "description":"Naufal dan Ginton - Juara 3 Olimpiade Jaringan"
+    },
+    {
+        "rank":"Juara 2",
+        "description":"Baihaqi & Simforian - Juara 2 LKS Cybersecurity Tingkat Provinsi"
+    },
+    {
+        "rank":"Juara 2",
+        "description":"Ginton - Juara 2 Bodha Networking"
+    },
+    {
+        "rank":"Juara 2",
+        "description":"Azka - Juara 2 Design Competition Held by Commit Fest 2020"
+    }
+]
+>>>>>>> Stashed changes

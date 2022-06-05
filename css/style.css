@@ -505,7 +505,14 @@ span {
   }
 }
 
+<<<<<<< Updated upstream
 /* * ------------------------------------ SKILLS / SUBJECTS ------------------------------------ */
+||||||| constructed merge base
+/* * SKILLS / SUBJECTS */
+=======
+
+/* * SKILLS / SUBJECTS */
+>>>>>>> Stashed changes
 .skill-container {
   display: flex;
   flex-direction: column;
@@ -1708,8 +1715,20 @@ footer .logo3 {
   color: #f0ffff;
   font-weight: 900;
 }
+<<<<<<< Updated upstream
 
 /* !-----------------------------------------------------------SLICK SLIDER WIDTH----------------------------------------- */
 .slick-slider {
   max-width: 90vw;
 }
+||||||| constructed merge base
+=======
+
+/* !-----------------------------------------------------------SLICK SLIDER WIDTH----------------------------------------- */
+.slick-slider {
+  max-width: 90vw;
+}
+.mobile-slider .slick {
+  Max-width: 100vw;
+}
+>>>>>>> Stashed changes
