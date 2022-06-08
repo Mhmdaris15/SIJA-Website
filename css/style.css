@@ -63,11 +63,13 @@ header * {
 }
 
 .left-side > img {
-  width: 69%;
+  width: 100%;
+  height: 100%;
   margin: auto;
   position: absolute;
   margin-left: 10%;
   opacity: 50%;
+  object-fit: contain;
 }
 
 .text {
@@ -82,6 +84,13 @@ header * {
   text-underline-offset: 15px;
   font-weight: 400;
 }
+
+@media screen and (min-width:901px){
+  .text h1 {
+    font-size: 2em;
+  }
+}
+
 .text span {
   font-weight: 900;
 }
@@ -137,15 +146,15 @@ header * {
 .right-side {
   display: grid;
   grid-template-areas:
-    "img-preview img-preview"
-    "img-desc empty-space";
-  grid-template-columns: 75% 25%;
-  grid-template-rows: 75% 25%;
+    "img-preview"
 }
 
 .img-preview {
   grid-area: img-preview;
-  background-color: #0198ff;
+  /* background-color: #0198ff; */
+  background-image: url(../img/3d-triangle-shapes.png);
+  background-size: cover;
+  background-position: center;
 }
 
 /* * ------------------------------------ MENU ------------------------------------ */
@@ -171,9 +180,10 @@ h1.title-photos {
 .down-side {
   display: none !important;
   margin: auto;
-  height: 50%;
-  width: 80%;
-  transform: translateY(-120%);
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  /* transform: translateY(-120%); */
 }
 
 .down-side .box {
@@ -184,6 +194,7 @@ h1.title-photos {
 
 .down-side .box img {
   width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
@@ -201,40 +212,36 @@ ul.slick-dots button {
 /* * ------------------------------------ SLICK FOR HEADER ------------------------------------ */
 .my-slick {
   display: flex;
-  width: 100%;
+  position: absolute;
+  inset: 0;
+  width: 90%;
   height: 100%;
+  /* height: 70%; */
   margin: auto;
+  /* margin-bottom: 3em; */
+  overflow: hidden !important;
   justify-content: center;
-}
+  object-fit: contain;
 
-.img-desc {
-  grid-area: img-desc;
-  background-color: #1a49ba;
-}
-
-.empty-space {
-  grid-area: empty-space;
-  background-color: #f9b8c4;
 }
 
 .right-side .slick-dots {
   display: flex;
-  width: 90%;
-  flex-direction: column;
-  transform: translate(2em, 6em);
+  /* width: 90%; */
+  /* flex-direction: column; */
+  /* transform: translate(2em, 6em); */
   z-index: 10;
-  overflow: hidden !important;
+  /* overflow: hidden !important; */
 }
 
-.slick-slide p {
-  /* transform: translate(4em, 6em);
-  z-index: 100; */
+.my-slick img {
+  filter: brightness(50%);
 }
 
 .right-side .slick-list {
-  transform: trn;
-  margin-top: 20% !important;
-  margin-left: 10% !important;
+  /* transform: trn; */
+  /* margin-top: 20% !important; */
+  /* margin-left: 10% !important; */
 }
 
 /* * ------------------------------------ NAVIGATION BAR ------------------------------------*/
@@ -277,92 +284,6 @@ nav .nav-lists {
 
 /* * ------------------------------------ SECTIONS ------------------------------------ */
 
-/* * ------------------------------------ SIJA PHOTOS ------------------------------------ */
-
-.sija-photo-section {
-  width: 100%;
-  height: 80vh;
-  margin: auto;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* justify-items: center; */
-  background-image: url(../img/bg1.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
-.container-sija-photos {
-  position: block;
-  width: 320px;
-  margin: 0 auto 0 auto;
-  perspective: 1000px;
-}
-
-.carousel-sija {
-  position: block;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d; 
-  animation: rotate360 60s infinite forwards linear;
-}
-.carousel__face { 
-  position: absolute;
-  width: 95%;
-  height: 187px;
-  top: 50px;
-  left: 10px;
-  right: 10px;
-  background-size: cover;
-  box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
-  display: flex;
-}
-
-span {
-  margin: auto;
-  font-size: 2rem;
-}
-
-
-.carousel__face:nth-child(1) {
-  background-image: url("https://images.pexels.com/photos/1141853/pexels-photo-1141853.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-  transform: rotateY(  0deg) translateZ(430px); }
-.carousel__face:nth-child(2) { 
-  background-image: url("https://images.pexels.com/photos/1258865/pexels-photo-1258865.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-    transform: rotateY( 40deg) translateZ(430px); }
-.carousel__face:nth-child(3) {
-  background-image: url("https://images.pexels.com/photos/808466/pexels-photo-808466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-  transform: rotateY( 80deg) translateZ(430px); }
-.carousel__face:nth-child(4) {
-  background-image: url("https://images.pexels.com/photos/1394841/pexels-photo-1394841.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-  transform: rotateY(120deg) translateZ(430px); }
-.carousel__face:nth-child(5) { 
-  background-image: url("https://images.pexels.com/photos/969679/pexels-photo-969679.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
- transform: rotateY(160deg) translateZ(430px); }
-.carousel__face:nth-child(6) { 
-  background-image: url("https://images.pexels.com/photos/1834400/pexels-photo-1834400.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
- transform: rotateY(200deg) translateZ(430px); }
-.carousel__face:nth-child(7) { 
-  background-image: url("https://images.pexels.com/photos/1415268/pexels-photo-1415268.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
- transform: rotateY(240deg) translateZ(430px); }
-.carousel__face:nth-child(8) {
-  background-image: url("https://images.pexels.com/photos/135018/pexels-photo-135018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-  transform: rotateY(280deg) translateZ(430px); }
-.carousel__face:nth-child(9) {
-  background-image: url("https://images.pexels.com/photos/1175135/pexels-photo-1175135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-  transform: rotateY(320deg) translateZ(430px); }
-
-
-
-@keyframes rotate360 {
-  from {
-    transform: rotateY(0deg);
-  }
-  to {
-    transform: rotateY(-360deg);
-  }
-}
-
-
 /* * ------------------------------------ VIDEO SECTION ------------------------------------ */
 .video-sija {
   position: relative;
@@ -385,9 +306,11 @@ span {
   align-items: center;
   width: 100%;
   height: 100vh;
+  margin: 10em auto 0;
   background: url(../img/thumbnail.png);
   background-size: cover;
   background-position: center;
+  z-index: 20 !important;
 }
 
 @media screen and (max-width: 500px) {
@@ -405,10 +328,17 @@ span {
 .container-video h1 {
   color: #000;
   display: block;
+  margin: center;
   text-align: center;
-  background-color: #f9b8c4;
-  padding: 10px;
-  border-radius: 15px;
+  background-color: #C8E5FB;
+  box-shadow: 0 0 5px 5px gray;
+  padding: 0.4em 0.8em;
+  border-radius: 30px;
+  transition: 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+.container-video h1:hover {
+  background-color: #F9B8C4;
 }
 
 .container-video .btn {
@@ -505,18 +435,20 @@ span {
   }
 }
 
-<<<<<<< Updated upstream
 /* * ------------------------------------ SKILLS / SUBJECTS ------------------------------------ */
-||||||| constructed merge base
-/* * SKILLS / SUBJECTS */
-=======
-
-/* * SKILLS / SUBJECTS */
->>>>>>> Stashed changes
 .skill-container {
   display: flex;
   flex-direction: column;
   max-width: 100vw;
+  background: url(../img/3d-skill-shapes.png);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.basic-skill p, .core-skill p {
+  display: block;
+  margin: auto 2em;
 }
 
 @media screen and (max-width: 600px) {
@@ -525,6 +457,7 @@ span {
 .basic-skill,
 .core-skill {
   display: flex;
+  text-align: center;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -912,7 +845,7 @@ ul.skill-list li {
 
 @media screen and (max-width: 900px) {
   .grid-header {
-    /* height: 200vh; */
+    height: 100vh;
     min-height: 220vh;
     /* display: flex; */
     /* flex-direction: column; */
@@ -932,24 +865,25 @@ ul.skill-list li {
 
   .left-side {
     display: flex;
-    width: 100vw;
+    width: 90vw;
+    justify-content: end;
     min-height: 100vh;
+    object-fit: cover;
   }
 
   .right-side {
     display: none;
-    flex-direction: column;
-    width: 100vw;
+    /* flex-direction: column; */
+    /* width: 50vw; */
+  }
+
+  .left-side .circle {
+    display: none;
   }
 
   .img-preview {
     width: 100vw;
     height: 75%;
-  }
-
-  .img-desc {
-    width: 100vw;
-    height: 25%;
   }
 
   .kotak {
@@ -1024,6 +958,9 @@ ul.skill-list li {
 
   h1.title-photos,
   .down-side {
+    background: url(../img/3d-triangle-shapes.png);
+    background-size: cover;
+    background-position: center;
     display: block !important;
   }
 
@@ -1584,7 +1521,7 @@ footer .logo3 {
     /* background-color: rgba(255, 255, 255, 0); */
   }
 
-  footer .logo3,
+  footer .logo3,  
   footer .logo2 {
     display: none;
   }
@@ -1626,6 +1563,11 @@ footer .logo3 {
   /* margin-top: -220px !important; */
   margin-bottom: 50px;
 }
+
+.ach-title {
+  text-align: center;
+}
+
 .cat-cards .card {
   height: 500px;
   width: 350px;
@@ -1715,20 +1657,8 @@ footer .logo3 {
   color: #f0ffff;
   font-weight: 900;
 }
-<<<<<<< Updated upstream
 
 /* !-----------------------------------------------------------SLICK SLIDER WIDTH----------------------------------------- */
 .slick-slider {
   max-width: 90vw;
 }
-||||||| constructed merge base
-=======
-
-/* !-----------------------------------------------------------SLICK SLIDER WIDTH----------------------------------------- */
-.slick-slider {
-  max-width: 90vw;
-}
-.mobile-slider .slick {
-  Max-width: 100vw;
-}
->>>>>>> Stashed changes
