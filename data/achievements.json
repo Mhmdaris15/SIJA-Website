@@ -1,6 +1,41 @@
 [
     {
         "rank":"Juara 3",
+        "description": "Muhamad Rafli Maulana Rizki - Network Competition IDN IT FEST 2022",
+        "img":"img/idn-network-rafly.jpg"
+    },
+    {
+        "rank":"Sertifikasi Internasional",
+        "description": "Muhamad Rafli Maulana Rizki - Has Successful passed International Certification of Pentest+",
+        "img":"img/pentest-rafly.jpg"
+    },
+    {
+        "rank":"Juara 3",
+        "description": "Marvin Saputra - LKS ITNSA tingkat Kabupaten",
+        "img":"img/itnsa-marvin-kabupaten.jpg"
+    },
+    {
+        "rank":"Sertifikasi Internasional",
+        "description": "Marvin Saputra - Has Successful passed International Certification of Linux+",
+        "img":"img/marvin-linux.jpg"
+    },
+    {
+        "rank":"Juara 2",
+        "description" : "Hermawan Sentyaki Sarjito - KKSI Data Science 2021 tingkat Nasional",
+        "img": "img/kksi-data-hermawan.jpg"
+    },
+    {
+        "rank":"Juara 2",
+        "description" : "Muhammad Aris Septanugroho - KKSI Data Science 2021 tingkat Nasional",
+        "img": "img/kksi-data-aris.jpg"
+    },
+    {
+        "rank":"Juara 2",
+        "description" : "Ansof Habibunnajar - KKSI Data Science 2021 tingkat Nasional",
+        "img": "img/kksi-data-ansof.jpg"
+    },
+    {
+        "rank":"Juara 3",
         "description":"Ahmad Bayhaqi Saputra & Simforian Ivano - LKS Cybersecurity tingkat Provinsi",
         "img":"img/achievement%20(1).jpg"
     },
@@ -10,7 +45,7 @@
         "img":"img/achievement%20(3).jpeg"
     },
     {
-        "rank":"Juara 2",
+        "rank":"Juara 3",
         "description":"Ahmad Bayhaqi Saputra & Simforian Ivano - LKS Cybersecurity tingkat Provinsi",
         "img":"img/achievement%20(4).jpeg"
     },
@@ -21,7 +56,7 @@
     },
     {
         "rank":"Juara 2",
-        "description":"Ginton - Bodha Networking",
+        "description":"Nauval - Bodha Networking",
         "img":"img/achievement%20(6).jpeg"
     },
     {
@@ -41,7 +76,7 @@
     },
     {
         "rank":"Juara 2",
-        "description":"Nauval - Bodha Networking",
+        "description":"Ginton - Bodha Networking",
         "img":"img/achievement%20(10).PNG"
     },
     {

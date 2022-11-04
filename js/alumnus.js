@@ -1,5 +1,5 @@
 async function loadData(){
-    const response = await fetch('https://raw.githubusercontent.com/Mhmdaris15/SIJA-Website/main/data/alumnus.json');
+    const response = await fetch('../data/alumnus.json');
     const data = await response.json();
     for (let d of data) {
         let text = `
@@ -14,11 +14,10 @@ async function loadData(){
           <div class="biodata">
               <div class="name">${d.name}</div>
               <div class="job">${d.job}</div>
-              <div class="salary">${d.salary}</div>
-              <div class="company"><i class="fa-solid fa-building"></i> ${d.company}</div>
+              <div class="company"><i class="fa-solid ${d.job.includes('Kuliah')? "fa-school-flag":"fa-building"}"></i> ${d.company}</div>
           </div>
       </div>
-      </div>            
+      </div>
         `;
         let container = document.querySelector('.alumnus-cards');
         container.insertAdjacentHTML("beforeend", text);
